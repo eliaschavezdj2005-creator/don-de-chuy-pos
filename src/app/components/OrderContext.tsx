@@ -7,27 +7,24 @@ import { projectId, publicAnonKey } from '../../../utils/supabase/info';
 // ============================================
 const SUPABASE_DIRECT = `https://ldqohbdvwpsxakjkrjqu.supabase.co`;
 
-// En producción (Vercel), las llamadas REST van a /api/supabase/...
-// que Vercel reenvía a Supabase desde sus servidores (sin tocar el DNS del WiFi).
-// El WebSocket de Realtime sigue usando el dominio directo; si falla, el
-// polling de 4 s lo sustituye automáticamente.
-const PROXY_BASE =
-  typeof window !== 'undefined' && window.location.hostname !== 'localhost'
-    ? `${window.location.origin}/api/supabase`
-    : SUPABASE_DIRECT; // En dev local, apunta directo
+// En producción, todas las llamadas REST van a /api/supabase?_url=<encoded>
+// Vercel ejecuta ese edge function y reenvía a Supabase desde sus servidores,
+// esquivando el bloqueo de DNS del WiFi. El WebSocket de Realtime se intenta
+// directo; si falla, el polling de 4s lo reemplaza automáticamente.
+const IS_PROD = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
+
+function proxyFetch(url: RequestInfo | URL, init?: RequestInit): Promise<Response> {
+  const urlStr = url.toString();
+  if (IS_PROD && urlStr.startsWith(SUPABASE_DIRECT)) {
+    const proxyUrl = `/api/supabase?_url=${encodeURIComponent(urlStr)}`;
+    return fetch(proxyUrl, init);
+  }
+  return fetch(url, init);
+}
 
 const supabase = createClient(SUPABASE_DIRECT, publicAnonKey, {
   realtime: { params: { eventsPerSecond: 10 } },
-  global: {
-    fetch: (url: RequestInfo | URL, init?: RequestInit) => {
-      const urlStr = url.toString();
-      // Redirige las llamadas REST al proxy de Vercel
-      const proxied = urlStr.startsWith(SUPABASE_DIRECT)
-        ? urlStr.replace(SUPABASE_DIRECT, PROXY_BASE)
-        : urlStr;
-      return fetch(proxied, init);
-    },
-  },
+  global: { fetch: proxyFetch },
 });
 
 const LS_KEY = 'don-de-chuy-v5';

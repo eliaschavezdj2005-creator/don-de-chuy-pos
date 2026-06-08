@@ -1,10 +1,9 @@
 export const config = { runtime: 'edge' };
 
-const SUPABASE_URL = 'https://ldqohbdvwpsxakjkrjqu.supabase.co';
+const SUPABASE_ORIGIN = 'https://ldqohbdvwpsxakjkrjqu.supabase.co';
 const FORWARD_HEADERS = ['content-type', 'apikey', 'authorization', 'prefer', 'range', 'x-client-info'];
 
 export default async function handler(req: Request): Promise<Response> {
-  // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
@@ -18,9 +17,11 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const url = new URL(req.url);
-  // Strip /api/supabase prefix, keep the rest path + query params
-  const targetPath = url.pathname.replace(/^\/api\/supabase/, '') + url.search;
-  const targetUrl = SUPABASE_URL + targetPath;
+  const targetUrl = url.searchParams.get('_url');
+
+  if (!targetUrl || !targetUrl.startsWith(SUPABASE_ORIGIN)) {
+    return new Response('Bad request', { status: 400 });
+  }
 
   const headers = new Headers();
   for (const h of FORWARD_HEADERS) {
@@ -34,7 +35,7 @@ export default async function handler(req: Request): Promise<Response> {
     method: req.method,
     headers,
     body,
-    // @ts-ignore - duplex needed for streaming request bodies
+    // @ts-ignore
     duplex: 'half',
   });
 
