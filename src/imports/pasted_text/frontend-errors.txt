@@ -1,0 +1,1007 @@
+ Running frontend commit eced3a6cd94e8a8b08dabe8c32dae590a04fc09c
+browser-intake-datadoghq.com/api/v2/rum:1  Failed to load resource: the server responded with a status of 405 (Method Not Allowed)
+vendor-core-f97691b5f390a9d7.min.js.br:54 Statsig is not ready to log exposures, will retry in 1 seconds
+(anonymous) @ vendor-core-f97691b5f390a9d7.min.js.br:54
+vendor-core-f97691b5f390a9d7.min.js.br:54 Loaded 81 scripts (7736926b), 70 from cache (6950394b)
+vendor-core-f97691b5f390a9d7.min.js.br:54 [import] git: eced3a6cd94e8a8b08dabe8c32dae590a04fc09c, stamp: DC36CDE41FDCD4CD
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: <URL>
+vendor-core-f97691b5f390a9d7.min.js.br:54 [file_browser.contentful_paint.total.Sidebar.RecentFiles] You appear to be logging a relative timestamp and not an epoch timestamp. Use relativeToEpochMs() to convert.
+(anonymous) @ vendor-core-f97691b5f390a9d7.min.js.br:54
+vendor-core-f97691b5f390a9d7.min.js.br:54 [file_browser.contentful_paint.total.MainBodyContent.RecentFiles] You appear to be logging a relative timestamp and not an epoch timestamp. Use relativeToEpochMs() to convert.
+(anonymous) @ vendor-core-f97691b5f390a9d7.min.js.br:54
+vendor-core-f97691b5f390a9d7.min.js.br:54 [file_browser.contentful_paint.total.FileCreateEntrypoint.RecentFiles] You appear to be logging a relative timestamp and not an epoch timestamp. Use relativeToEpochMs() to convert.
+(anonymous) @ vendor-core-f97691b5f390a9d7.min.js.br:54
+/files/team/1545086821499667235/recents-and-sharing?fuid=1545086819457144184:1 [Intervention] Images loaded lazily and replaced with placeholders. Load events are deferred. See https://go.microsoft.com/fwlink/?linkid=2048113
+vendor-core-f97691b5f390a9d7.min.js.br:54 Autosave Changes not available or already claimed by another tab undefined
+289-d3c5d1d999941c24.min.js.br:7 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+initialize @ 289-d3c5d1d999941c24.min.js.br:7
+vendor-core-f97691b5f390a9d7.min.js.br:54 [WorkerInstance] worker init
+vendor-core-f97691b5f390a9d7.min.js.br:54 [WorkerInstance] worker register_api success
+vendor-core-f97691b5f390a9d7.min.js.br:54 [registerClient] client registered successfully MessagePort
+vendor-core-f97691b5f390a9d7.min.js.br:54 [Fullscreen] Booting... (emscripten version 4.0.21)
+vendor-core-f97691b5f390a9d7.min.js.br:54 [GPU] graphicsAPI:"WebGPU", vendor:"Google Inc. (Intel)" renderer:"ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E9B) Direct3D11 vs_5_0 ps_5_0, D3D11)" deviceArchitecture:"gen-9" deviceDescription:"" webGPUDevice:"" webGPUVendor:"intel" bindings:"emdawnwebgpu"
+vendor-core-f97691b5f390a9d7.min.js.br:54 [Fullscreen] Ready in 211.0ms
+289-d3c5d1d999941c24.min.js.br:7 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+f @ 289-d3c5d1d999941c24.min.js.br:7
+vendor-core-f97691b5f390a9d7.min.js.br:54 [FullscreenApp] calling setEditorTheme and setting preference dark
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] connecting to wss://www.figma.com/api/multiplayer/DP4TgKaqlw8yAR1JYOtPXF?role=editor&tracking_session_id=hLK0DmMMye8kgJhy&version=161&recentReload=0&file-load-streaming-compression&user-id=1545086819457144184&client_release=eced3a6cd94e8a8b08dabe8c32dae590a04fc09c
+vendor-core-f97691b5f390a9d7.min.js.br:54 [FullscreenApp] calling setEditorTheme and setting preference dark
+The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+/make/DP4TgKaqlw8yAR1JYOtPXF/Sistema-de-Dise%C3%B1o-para-Restaurante--copia-?t=3fAKMgguyVjdZAtB-0:1 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] Joining file version 106 (initial load)
+compiled_wasm.js.br:2 [RenderWorker] Booting... (emscripten version 4.0.21)
+compiled_wasm.js.br:2 [GPU] graphicsAPI:"WebGPU", vendor:"Google Inc. (Intel)" renderer:"ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E9B) Direct3D11 vs_5_0 ps_5_0, D3D11)" deviceArchitecture:"gen-9" deviceDescription:"" webGPUDevice:"" webGPUVendor:"intel" bindings:"emdawnwebgpu"
+render_worker-0a934e875038d44c.min.js.br:28 The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127
+aU @ render_worker-0a934e875038d44c.min.js.br:28
+vendor-core-f97691b5f390a9d7.min.js.br:54 Migration succeeded: context: fullscreen_migrate_SceneGraphManager, version: 106, duration: 0ms.
+/api/plans/88685bb4-7461-417c-b81a-39e1084bbcd5/npm_private_registry/scopes:1  Failed to load resource: the server responded with a status of 404 ()
+vendor-core-f97691b5f390a9d7.min.js.br:54 [Fullscreen] loadtime=1.61s maxmem=13607732
+vendor-core-f97691b5f390a9d7.min.js.br:54 [devtools] Initialized LS
+vendor-core-f97691b5f390a9d7.min.js.br:54 [devtools] Initialized LS
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 🔧 Supabase URL: https://xlqmsvswprflqtjuqkzk.supabase.co
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 🔄 INICIANDO CARGA DE DATOS...
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] connecting to wss://www.figma.com/api/multiplayer/DP4TgKaqlw8yAR1JYOtPXF?role=editor&tracking_session_id=hLK0DmMMye8kgJhy&version=161&recentReload=0&file-load-streaming-compression=&user-id=1545086819457144184&client_release=eced3a6cd94e8a8b08dabe8c32dae590a04fc09c&reconnect-key=431daf913090f36820b11fa489eed8e59424751d&reconnect-sequence-number=426&initialFileVersion=106&previousLoadMode=full&incremental-loading-validation=0
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] Joining file version 106 (skip_reload reconnect)
+image-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 408 ()
+image-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 408 ()
+image-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 408 ()
+cors-image-proxy.figma.com/?url=https%3A%2F%2Fe8d1d881-20df-4717-b052-30c685bb1c28-v3-figmaiframepreview.figma.site%2F_components%2Flive%2Fimage-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 403 ()
+cors-image-proxy.figma.com/?url=https%3A%2F%2Fe8d1d881-20df-4717-b052-30c685bb1c28-v3-figmaiframepreview.figma.site%2F_components%2Flive%2Fimage-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 403 ()
+cors-image-proxy.figma.com/?url=https%3A%2F%2Fe8d1d881-20df-4717-b052-30c685bb1c28-v3-figmaiframepreview.figma.site%2F_components%2Flive%2Fimage-1.2dd061b7.png:1  Failed to load resource: the server responded with a status of 403 ()
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 [vite] server connection lost. Polling for restart...
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 500
+ping @ client:1035
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] connecting to wss://www.figma.com/api/multiplayer/DP4TgKaqlw8yAR1JYOtPXF?role=editor&tracking_session_id=hLK0DmMMye8kgJhy&version=161&recentReload=0&file-load-streaming-compression=&user-id=1545086819457144184&client_release=eced3a6cd94e8a8b08dabe8c32dae590a04fc09c&reconnect-key=431daf913090f36820b11fa489eed8e59424751d&reconnect-sequence-number=433&initialFileVersion=106&previousLoadMode=full&incremental-loading-validation=0
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] Joining file version 106 (skip_reload reconnect)
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+logs:1  Failed to load resource: the server responded with a status of 400 ()
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+logs:1  Failed to load resource: the server responded with a status of 400 ()
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 ⚠️ ERROR AL CONECTAR CON SUPABASE
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 Errors: Object Object
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 📦 Usando datos de localStorage
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:106 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+vendor-core-f97691b5f390a9d7.min.js.br:54 [Livegraph] Connection closed. Code: 4010, reason: server_idle
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] connecting to wss://www.figma.com/api/multiplayer/DP4TgKaqlw8yAR1JYOtPXF?role=editor&tracking_session_id=hLK0DmMMye8kgJhy&version=161&recentReload=0&file-load-streaming-compression=&user-id=1545086819457144184&client_release=eced3a6cd94e8a8b08dabe8c32dae590a04fc09c&reconnect-key=431daf913090f36820b11fa489eed8e59424751d&reconnect-sequence-number=444&initialFileVersion=106&previousLoadMode=full&incremental-loading-validation=0
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+vendor-core-f97691b5f390a9d7.min.js.br:54 [MultiplayerSession] Joining file version 106 (journaled reconnect)
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+devtools_worker-2f6f90364114a1e3.min.js.br:1201 [esbuild-wasm] Initializing from URL: /webpack-artifacts/assets/23e258424348bc39.wasm
+devtools_worker-2f6f90364114a1e3.min.js.br:1201 [esbuild-wasm] Initialized
+devtools_worker-2f6f90364114a1e3.min.js.br:3539 [bundleCode] Found 8 CSS files in VFS
+devtools_worker-2f6f90364114a1e3.min.js.br:3539 [bundleCode] Total CSS size to be processed by lightningcss: 0.02MB
+devtools_worker-2f6f90364114a1e3.min.js.br:1201 [lightningcss-wasm] Initialized
+devtools_worker-2f6f90364114a1e3.min.js.br:3537 [lightningCSS] Processing 0.10MB of CSS (environment: browser)
+devtools_worker-2f6f90364114a1e3.min.js.br:3537 [lightningCSS] Encoded size: 0.10MB
+devtools_worker-2f6f90364114a1e3.min.js.br:3537 [lightningCSS] Transform completed successfully
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+ WebSocket connection to 'wss://xlqmsvswprflqtjuqkzk.supabase.co/realtime/v1/websocket?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhscW1zdnN3cHJmbHF0anVxa3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDUyMjAsImV4cCI6MjA5NDg4MTIyMH0._E5nPqzD8_-FdjAHSd399YOoqpxbXosRYa1tNKV8g2M&eventsPerSecond=10&vsn=2.0.0' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED
+transportConnect @ app-m4olwxx5jkplxrwg2mexyk2iee5t2caufn7fish5lh6exdy6togs.makeproxy-c.figma.site/node_modules/.vite/deps/@supabase_supabase-js.js?v=ce4bf5d0:7246
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/transactions?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+xlqmsvswprflqtjuqkzk.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:65 🚀 Iniciando app con Supabase: https://ldqohbdvwpsxakjkrjqu.supabase.co...
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:65 📦 Cargando desde localStorage...
+code_components_preview_iframe-952b6ec3e217a8c2.min.js.br:65 🌐 Conectando a Supabase...
+ldqohbdvwpsxakjkrjqu.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ldqohbdvwpsxakjkrjqu.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ldqohbdvwpsxakjkrjqu.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+ WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/@vite/client:1035
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+ldqohbdvwpsxakjkrjqu.supabase.co/rest/v1/orders?select=*&order=timestamp.desc:1  Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
+client:1035 WebSocket connection to 'wss://app-55hmivkr633n7vt2mv3iymppkkmk6qs3cq7556lxnyvdj6ap5hen.makeproxy-c.figma.site/' failed: Error during WebSocket handshake: Unexpected response code: 404
+ping @ client:1035
+waitForSuccessfulPing @ client:1060
