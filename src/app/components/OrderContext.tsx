@@ -366,25 +366,18 @@ export function OrderProvider({ children }: { children: ReactNode }) {
   }, [fetchFromSupabase]);
 
   // ============================================
-  // POLLING: retry sync every 4s when offline, 30s when online
+  // POLLING: cada 5s siempre — garantiza sync en todos los WiFis
+  // aunque el WebSocket de Realtime no funcione
   // ============================================
   useEffect(() => {
     if (loading) return;
 
-    const tick = async () => {
-      const interval = connectedRef.current ? 30000 : 4000;
-      clearInterval(pollingRef.current!);
-      pollingRef.current = setInterval(async () => {
-        await trySync(true);
-      }, interval);
-    };
+    pollingRef.current = setInterval(() => {
+      trySync(true);
+    }, 5000);
 
-    tick();
-    const unsub = () => { if (pollingRef.current) clearInterval(pollingRef.current); };
-
-    // Re-setup interval when connected state changes
-    return unsub;
-  }, [loading, connected, trySync]);
+    return () => { if (pollingRef.current) clearInterval(pollingRef.current); };
+  }, [loading, trySync]);
 
   // ============================================
   // REALTIME SUBSCRIPTIONS
