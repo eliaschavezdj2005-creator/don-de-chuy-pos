@@ -4,7 +4,7 @@ import { MENU_ITEMS, CATEGORIES, QUICK_DRINKS } from './menuData';
 import {
   User, ShoppingCart, Trash2, Send, ArrowLeft, CheckCircle,
   Square, CheckSquare, Calculator, X, Banknote, Zap,
-  PlusCircle, ChevronRight, Plus, Coffee, Clock, ChefHat, PackageCheck
+  PlusCircle, ChevronRight, Plus, Coffee, Clock, ChefHat, PackageCheck, Receipt
 } from 'lucide-react';
 import { useNavigate } from 'react-router';
 import logo from '../../imports/image-1.png';

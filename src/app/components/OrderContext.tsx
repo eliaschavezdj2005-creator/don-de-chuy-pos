@@ -5,7 +5,7 @@ import { projectId, publicAnonKey } from '../../../utils/supabase/info';
 // ============================================
 // SUPABASE CLIENT — con proxy para WiFi que bloquea DNS de supabase.co
 // ============================================
-const SUPABASE_DIRECT = `https://bvaiqkuhorlghbproljd.supabase.co`;
+const SUPABASE_DIRECT = `https://taxicpjtltijhzpojmxw.supabase.co`;
 
 // En producción, todas las llamadas REST van a /api/supabase?_url=<encoded>
 // Vercel ejecuta ese edge function y reenvía a Supabase desde sus servidores,

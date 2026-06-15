@@ -1,6 +1,6 @@
 export const config = { runtime: 'edge' };
 
-const SUPABASE_ORIGIN = 'https://bvaiqkuhorlghbproljd.supabase.co';
+const SUPABASE_ORIGIN = 'https://taxicpjtltijhzpojmxw.supabase.co';
 const FORWARD_HEADERS = ['content-type', 'apikey', 'authorization', 'prefer', 'range', 'x-client-info'];
 
 export default async function handler(req: Request): Promise<Response> {
