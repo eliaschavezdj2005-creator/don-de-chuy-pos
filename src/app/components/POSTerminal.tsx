@@ -79,36 +79,36 @@ function OtroModal({ onAdd, onClose }: {
     onClose();
   };
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-end sm:items-center justify-center z-50 p-0 sm:p-4">
-      <div className="bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl w-full sm:max-w-xs p-6">
-        <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-5 sm:hidden"/>
-        <div className="flex items-center justify-between mb-5">
-          <h3 className="font-bold text-lg">Producto personalizado</h3>
-          <button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100 min-w-[44px] min-h-[44px] flex items-center justify-center">
-            <X className="w-5 h-5"/>
+    <div className="fixed inset-0 flex items-end sm:items-center justify-center z-50 p-0 sm:p-4" style={{ backgroundColor:'rgba(0,0,0,0.75)' }}>
+      <div className="w-full sm:max-w-xs overflow-hidden shadow-2xl" style={{ borderRadius:'20px 20px 0 0', background:'linear-gradient(180deg,#C8A870 0%,#E8D5A8 5%,#F0E0B8 50%,#E8D5A8 95%,#C8A870 100%)', border:'2px solid #A07840' }}>
+        <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-1 sm:hidden" style={{ backgroundColor:'rgba(80,50,20,0.25)' }}/>
+        <div className="flex items-center justify-between p-5 pb-3">
+          <h3 style={{ fontWeight:900, fontSize:17, color:'#2A1A08', fontFamily:'serif' }}>📜 Producto personalizado</h3>
+          <button onClick={onClose} className="p-2 rounded-xl min-w-[44px] min-h-[44px] flex items-center justify-center" style={{ backgroundColor:'rgba(80,50,20,0.08)' }}>
+            <X className="w-5 h-5" style={{ color:'#2A1A08' }}/>
           </button>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 px-5 pb-6">
           <div>
-            <label className="text-xs font-bold text-gray-400 mb-1.5 block uppercase tracking-wide">Nombre</label>
+            <label style={{ fontSize:10, fontWeight:700, color:'rgba(80,50,20,0.55)', textTransform:'uppercase', letterSpacing:2, display:'block', marginBottom:6, fontFamily:'serif' }}>Nombre</label>
             <input autoFocus value={name} onChange={e => setName(e.target.value)} placeholder="Ej: Elote con chile"
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary outline-none text-base"/>
+              style={{ width:'100%', padding:'11px 14px', borderRadius:8, border:'1px solid rgba(80,50,20,0.3)', backgroundColor:'rgba(80,50,20,0.06)', color:'#2A1A08', outline:'none', fontSize:15, boxSizing:'border-box', fontFamily:'serif' }}/>
           </div>
           <div>
-            <label className="text-xs font-bold text-gray-400 mb-1.5 block uppercase tracking-wide">Precio (L.)</label>
+            <label style={{ fontSize:10, fontWeight:700, color:'rgba(80,50,20,0.55)', textTransform:'uppercase', letterSpacing:2, display:'block', marginBottom:6, fontFamily:'serif' }}>Precio (L.)</label>
             <input type="number" value={price} onChange={e => setPrice(e.target.value)} placeholder="0.00"
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary outline-none text-base font-bold"/>
+              style={{ width:'100%', padding:'11px 14px', borderRadius:8, border:'1px solid rgba(80,50,20,0.3)', backgroundColor:'rgba(80,50,20,0.06)', color:'#2A1A08', outline:'none', fontSize:15, fontWeight:900, boxSizing:'border-box', fontFamily:'serif' }}/>
           </div>
           <div>
-            <label className="text-xs font-bold text-gray-400 mb-1.5 block uppercase tracking-wide">Categoría</label>
+            <label style={{ fontSize:10, fontWeight:700, color:'rgba(80,50,20,0.55)', textTransform:'uppercase', letterSpacing:2, display:'block', marginBottom:6, fontFamily:'serif' }}>Categoría</label>
             <select value={cat} onChange={e => setCat(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary outline-none text-base bg-white">
+              style={{ width:'100%', padding:'11px 14px', borderRadius:8, border:'1px solid rgba(80,50,20,0.3)', backgroundColor:'rgba(80,50,20,0.06)', color:'#2A1A08', outline:'none', fontSize:15, WebkitAppearance:'none' }}>
               {CATEGORIES.map(c => <option key={c}>{c}</option>)}
             </select>
           </div>
           <button onClick={submit} disabled={!name.trim() || !price}
-            className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-xl hover:opacity-90 disabled:opacity-40 text-base">
-            Agregar al carrito
+            style={{ width:'100%', padding:'13px', background:'linear-gradient(135deg,#CC3D00,#FF6B00)', color:'#F5EDD8', fontWeight:900, borderRadius:9, border:'none', fontSize:14, cursor: !name.trim()||!price ? 'not-allowed':'pointer', opacity: !name.trim()||!price ? 0.4:1, fontFamily:'serif', WebkitAppearance:'none' }}>
+            📜 Agregar al pergamino
           </button>
         </div>
       </div>
@@ -322,7 +322,14 @@ function CartItem({ item, onRemove, onQty, isExtra }: {
   );
 }
 
-// ─── Order Card - Estilo Mario ────────────────────────────────────────────────
+// ─── Order Card — Pergamino Ninja ─────────────────────────────────────────────
+const STATUS_SEAL: Record<string, { color: string; label: string }> = {
+  pending:   { color:'#92400E', label:'⏳ Pendiente' },
+  preparing: { color:'#1E40AF', label:'🔥 Preparando' },
+  ready:     { color:'#166534', label:'✅ Listo' },
+  delivered: { color:'rgba(80,50,20,0.3)', label:'📦 Entregado' },
+};
+
 function OrderCard({ order, onDeliver, onPay, onMarkItem, isDelivered }: {
   order: Order;
   onDeliver: () => void;
@@ -330,88 +337,108 @@ function OrderCard({ order, onDeliver, onPay, onMarkItem, isDelivered }: {
   onMarkItem: (itemId: string) => void;
   isDelivered: boolean;
 }) {
-  const headerColor = order.status === 'pending' ? 'from-amber-500 to-amber-600 border-amber-700' :
-                      order.status === 'preparing' ? 'from-blue-500 to-blue-600 border-blue-700' :
-                      order.status === 'ready' ? 'from-green-500 to-green-600 border-green-700' :
-                      'from-gray-400 to-gray-500 border-gray-600';
+  const seal = STATUS_SEAL[order.status] || STATUS_SEAL.pending;
+  const rollerColor = isDelivered ? '#8A7A60' : '#A07840';
+  const opacity = isDelivered ? 0.55 : 1;
 
   return (
-    <div className={`rounded-xl overflow-hidden shadow-xl border-4 transition-all ${isDelivered ? 'border-gray-300 opacity-60' : headerColor}`}>
-      {/* Header - Estilo Mario Block */}
-      <div className={`px-3 py-2 flex items-center justify-between bg-gradient-to-b ${headerColor} relative`}>
-        {/* Shine effect */}
-        <div className="absolute top-0 left-2 w-6 h-6 bg-white/30 rounded-full blur-md"/>
+    <div style={{ opacity, filter:`drop-shadow(0 3px 12px ${seal.color}33)` }}>
+      {/* Top roller */}
+      <div style={{ position:'relative', height:14, overflow:'hidden' }}>
+        <div style={{ position:'absolute', inset:0, borderRadius:'50% 50% 0 0 / 14px 14px 0 0', background:`linear-gradient(180deg,${rollerColor} 0%,#8A6830 100%)`, boxShadow:'inset 0 -2px 4px rgba(0,0,0,0.2)' }}/>
+        <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:14, height:14, borderRadius:'50%', backgroundColor:seal.color, border:`2px solid ${rollerColor}` }}/>
+      </div>
 
-        <div className="relative z-10">
-          <p className={`font-black text-sm leading-tight ${order.status === 'delivered' ? 'text-gray-600' : 'text-white'}`} style={{ textShadow: order.status !== 'delivered' ? '1px 1px 0px rgba(0,0,0,0.3)' : 'none' }}>
-            {order.id}
-          </p>
-          <div className={`flex items-center gap-1.5 text-[10px] mt-0.5 ${order.status === 'delivered' ? 'text-gray-500' : 'text-white/90'}`}>
-            <User className="w-2.5 h-2.5"/>{order.sentBy}
-            <Clock className="w-2.5 h-2.5 ml-0.5"/>
-            {new Date(order.timestamp).toLocaleTimeString('es-HN', { hour: '2-digit', minute: '2-digit' })}
+      {/* Parchment */}
+      <div style={{
+        background:'linear-gradient(180deg,#D4B896 0%,#ECD8B0 5%,#F0E0B8 30%,#ECD8B0 70%,#E0C890 95%,#C8A870 100%)',
+        position:'relative', overflow:'hidden',
+        boxShadow:'inset 2px 0 6px rgba(80,50,20,0.1), inset -2px 0 6px rgba(80,50,20,0.1)',
+      }}>
+        {/* Crease lines */}
+        <div style={{ position:'absolute', left:'33%', top:0, bottom:0, width:1, backgroundColor:'rgba(80,50,20,0.05)', pointerEvents:'none' }}/>
+        <div style={{ position:'absolute', left:'66%', top:0, bottom:0, width:1, backgroundColor:'rgba(80,50,20,0.05)', pointerEvents:'none' }}/>
+
+        {/* Header */}
+        <div style={{ padding:'8px 10px 6px', borderBottom:'1px solid rgba(80,50,20,0.15)' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+            <div>
+              <p style={{ fontWeight:900, fontSize:14, color:'#2A1A08', lineHeight:1, fontFamily:'serif' }}>{order.id}</p>
+              <div style={{ display:'flex', alignItems:'center', gap:5, marginTop:2 }}>
+                <User style={{ width:9, height:9, color:'rgba(80,50,20,0.5)' }}/>
+                <span style={{ fontSize:9, color:'rgba(80,50,20,0.6)', fontFamily:'serif' }}>{order.sentBy}</span>
+                <Clock style={{ width:9, height:9, color:'rgba(80,50,20,0.5)', marginLeft:2 }}/>
+                <span style={{ fontSize:9, color:'rgba(80,50,20,0.5)', fontFamily:'serif' }}>
+                  {new Date(order.timestamp).toLocaleTimeString('es-HN',{hour:'2-digit',minute:'2-digit'})}
+                </span>
+              </div>
+            </div>
+            <div style={{ padding:'2px 7px', borderRadius:20, backgroundColor:`${seal.color}18`, border:`1px solid ${seal.color}40` }}>
+              <span style={{ fontSize:9, fontWeight:800, color:seal.color, fontFamily:'serif' }}>{seal.label}</span>
+            </div>
           </div>
         </div>
-        <span className={`text-[10px] font-black px-2 py-0.5 rounded-full border-2 ${
-          order.status === 'ready' ? 'bg-white text-green-600 border-white' :
-          order.status === 'delivered' ? 'bg-white text-gray-500 border-white' :
-          'bg-white/20 text-white border-white/40'
-        }`}>
-          {STATUS_LABEL[order.status]}
-        </span>
-      </div>
 
-      {/* Items */}
-      <div className="bg-white p-2 space-y-1">
-        {order.items.map(item => {
-          const done = order.deliveredItems.includes(item.id);
-          return (
-            <button
-              key={item.id}
-              onClick={() => !isDelivered && onMarkItem(item.id)}
-              className={`w-full flex items-center gap-1.5 p-1.5 rounded-lg transition-all text-left min-h-[36px] border-2 ${
-                isDelivered ? 'cursor-default bg-gray-50 border-gray-200' :
-                done ? 'bg-green-50 border-green-400' : 'bg-gray-50 border-gray-200 hover:border-yellow-400 active:scale-95'
-              }`}
-            >
-              {done ? <CheckSquare className="w-3 h-3 text-green-500 shrink-0"/> : <Square className="w-3 h-3 text-gray-300 shrink-0"/>}
-              <span className={`flex-1 text-xs font-semibold ${done ? 'line-through text-gray-400' : ''}`}>{item.quantity}× {item.name}</span>
-              <span className="text-[10px] font-black text-amber-600">L.{(item.price * item.quantity).toFixed(2)}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Footer */}
-      <div className="bg-white border-t-2 border-gray-200 p-2">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-bold text-gray-500">Total:</span>
-          <span className="font-black text-amber-600 text-base">L.{order.total.toFixed(2)}</span>
+        {/* Items */}
+        <div style={{ padding:'6px 8px', display:'flex', flexDirection:'column', gap:3 }}>
+          {order.items.map(item => {
+            const done = order.deliveredItems.includes(item.id);
+            return (
+              <button key={item.id} onClick={() => !isDelivered && onMarkItem(item.id)}
+                style={{
+                  width:'100%', display:'flex', alignItems:'center', gap:6, padding:'5px 7px',
+                  borderRadius:6, textAlign:'left', minHeight:32, border:'none', WebkitAppearance:'none',
+                  cursor: isDelivered ? 'default' : 'pointer',
+                  backgroundColor: done ? 'rgba(22,101,52,0.12)' : 'rgba(80,50,20,0.06)',
+                  borderLeft:`2px solid ${done ? '#166534' : 'rgba(80,50,20,0.18)'}`,
+                  transition:'all 0.15s',
+                }}>
+                {done
+                  ? <CheckSquare style={{ width:12, height:12, color:'#166534', flexShrink:0 }}/>
+                  : <Square style={{ width:12, height:12, color:'rgba(80,50,20,0.25)', flexShrink:0 }}/>}
+                <span style={{ flex:1, fontSize:11, fontWeight:700, color: done ? 'rgba(80,50,20,0.35)' : '#2A1A08', textDecoration: done ? 'line-through' : 'none', fontFamily:'serif', lineHeight:1.2 }}>
+                  {item.quantity}× {item.name}
+                </span>
+                <span style={{ fontSize:10, fontWeight:900, color:'#92400E', fontFamily:'serif' }}>L.{(item.price*item.quantity).toFixed(2)}</span>
+              </button>
+            );
+          })}
         </div>
-        {!isDelivered && (
-          <div className="flex gap-1.5">
-            <button
-              onClick={onDeliver}
-              className="flex-1 py-2 bg-gradient-to-b from-gray-300 to-gray-400 border-2 border-gray-500 text-gray-700 font-black rounded-lg hover:from-gray-400 hover:to-gray-500 flex items-center justify-center gap-1 text-[10px] min-h-[40px] active:scale-95 transition-all shadow-md"
-            >
-              <PackageCheck className="w-3 h-3"/>Entregar
-            </button>
-            <button
-              onClick={onPay}
-              className="flex-[2] py-2 bg-gradient-to-b from-yellow-400 to-yellow-500 border-2 border-yellow-600 text-gray-900 font-black rounded-lg hover:from-yellow-500 hover:to-yellow-600 flex items-center justify-center gap-1 text-[10px] shadow-lg min-h-[40px] active:scale-95 transition-all"
-              style={{ textShadow: '1px 1px 0px rgba(255,255,255,0.3)' }}
-            >
-              <Banknote className="w-3 h-3"/>
-              {order.status === 'ready' ? 'Cobrar' : 'Cobrar'}
+
+        {/* Footer */}
+        <div style={{ padding:'6px 10px 8px', borderTop:'1px solid rgba(80,50,20,0.12)' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:6 }}>
+            <span style={{ fontSize:10, fontWeight:700, color:'rgba(80,50,20,0.5)', fontFamily:'serif' }}>Total misión:</span>
+            <span style={{ fontWeight:900, color:'#92400E', fontSize:15, fontFamily:'serif' }}>L.{order.total.toFixed(2)}</span>
+          </div>
+          {!isDelivered && (
+            <div className="flex gap-1.5">
+              <button onClick={onDeliver}
+                className="flex-1 flex items-center justify-center gap-1 active:scale-95 transition-all"
+                style={{ padding:'7px 4px', backgroundColor:'rgba(80,50,20,0.1)', border:'1px solid rgba(80,50,20,0.25)', borderRadius:7, color:'#2A1A08', fontWeight:800, fontSize:10, cursor:'pointer', minHeight:38, WebkitAppearance:'none', fontFamily:'serif' }}>
+                <PackageCheck style={{ width:11, height:11 }}/>Entregar
+              </button>
+              <button onClick={onPay}
+                className="flex-[2] flex items-center justify-center gap-1 active:scale-95 transition-all"
+                style={{ padding:'7px 4px', background:'linear-gradient(135deg,#CC3D00,#FF6B00)', border:'none', borderRadius:7, color:'#F5EDD8', fontWeight:900, fontSize:10, cursor:'pointer', minHeight:38, WebkitAppearance:'none', fontFamily:'serif', boxShadow:'0 0 10px rgba(255,107,0,0.3)' }}>
+                <Banknote style={{ width:11, height:11 }}/>💰 Cobrar
             </button>
           </div>
         )}
         {isDelivered && (
-          <div className="flex items-center justify-center gap-1 py-1.5 text-gray-400 text-xs">
-            <CheckCircle className="w-3 h-3 text-green-400"/>
-            <span className="font-bold">Entregado</span>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:5, padding:'6px 0', color:'rgba(80,50,20,0.4)', fontSize:11, fontFamily:'serif' }}>
+            <CheckCircle style={{ width:11, height:11, color:'#166534' }}/>
+            <span style={{ fontWeight:800 }}>Misión completada</span>
           </div>
         )}
+      </div>{/* /footer */}
+      </div>{/* /parchment */}
+
+      {/* Bottom roller */}
+      <div style={{ height:14, overflow:'hidden' }}>
+        <div style={{ height:14, borderBottomLeftRadius:14, borderBottomRightRadius:14, background:`linear-gradient(180deg,#8A6830 0%,${rollerColor} 100%)`, boxShadow:'inset 0 2px 4px rgba(0,0,0,0.2)', position:'relative' }}>
+          <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:14, height:14, borderRadius:'50%', backgroundColor:seal.color, border:`2px solid ${rollerColor}` }}/>
+        </div>
       </div>
     </div>
   );

@@ -4,237 +4,345 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import logo from '../../imports/image-1.png';
 
-const USER_COLORS: Record<string, { bg: string; border: string; glow: string }> = {
-  'Quedadito1': { bg:'#1A2A6C', border:'#3B5BDB', glow:'rgba(59,91,219,0.4)' },
-  'Quedadito2': { bg:'#4A1A6C', border:'#8B5CF6', glow:'rgba(139,92,246,0.4)' },
-  'WASHO':      { bg:'#6C2A00', border:'#FF6B00', glow:'rgba(255,107,0,0.4)' },
-  'WATA':       { bg:'#0A3A20', border:'#22C55E', glow:'rgba(34,197,94,0.4)' },
-  'elias':      { bg:'#5A0A0A', border:'#EF4444', glow:'rgba(239,68,68,0.4)' },
-  'tias':       { bg:'#5A0A3A', border:'#EC4899', glow:'rgba(236,72,153,0.4)' },
+// ── Colores por usuario ──────────────────────────────────────────────────────
+const USER_COLORS: Record<string, { seal: string; ink: string; accent: string }> = {
+  'Quedadito1': { seal:'#3B5BDB', ink:'#1A1A3A', accent:'#4A6AFF' },
+  'Quedadito2': { seal:'#7C3AED', ink:'#2A1A3A', accent:'#9B6AFF' },
+  'WASHO':      { seal:'#CC3D00', ink:'#2A0E00', accent:'#FF6B00' },
+  'WATA':       { seal:'#166534', ink:'#0A2010', accent:'#22C55E' },
+  'elias':      { seal:'#991B1B', ink:'#2A0808', accent:'#EF4444' },
+  'tias':       { seal:'#9D174D', ink:'#2A0818', accent:'#EC4899' },
 };
-const DEFAULT_COLOR = { bg:'#1A1510', border:'#FF6B00', glow:'rgba(255,107,0,0.3)' };
+const DEFAULT_COLOR = { seal:'#CC3D00', ink:'#2A0E00', accent:'#FF6B00' };
 
-function Shuriken({ size = 20, color = 'rgba(180,180,200,0.3)', spin = false }: { size?: number; color?: string; spin?: boolean }) {
+// ── Shuriken decorativo ──────────────────────────────────────────────────────
+function Shuriken({ size = 20, color = 'rgba(100,70,30,0.4)', spin = false }: { size?: number; color?: string; spin?: boolean }) {
   return (
     <svg width={size} height={size} viewBox="0 0 100 100"
-      style={spin ? { animation:'kds-shuriken-spin 6s linear infinite' } : {}}>
+      style={spin ? { animation:'kds-spin 8s linear infinite' } : {}}>
       <polygon points="50,5 58,40 95,50 58,60 50,95 42,60 5,50 42,40" fill={color}/>
-      <circle cx="50" cy="50" r="7" fill="none" stroke={color} strokeWidth="2"/>
+      <circle cx="50" cy="50" r="7" fill="none" stroke={color} strokeWidth="2.5"/>
     </svg>
   );
 }
 
-function TimerBadge({ minutes }: { minutes: number }) {
-  const [color, bg] = minutes < 5
-    ? ['#4ADE80','rgba(34,197,94,0.15)']
-    : minutes < 10
-    ? ['#FCD34D','rgba(234,179,8,0.15)']
-    : ['#F87171','rgba(239,68,68,0.15)'];
+// ── Scroll end SVG — el rollo del pergamino ──────────────────────────────────
+function ScrollEnd({ color, width = 280 }: { color: string; width?: number }) {
   return (
-    <div style={{ display:'flex', alignItems:'center', gap:4, padding:'3px 8px', borderRadius:20, backgroundColor:bg, border:`1px solid ${color}30` }}>
-      <Clock style={{ width:11, height:11, color }}/>
-      <span style={{ color, fontWeight:800, fontSize:11 }}>{minutes}m</span>
+    <svg width="100%" height="22" viewBox={`0 0 ${width} 22`} preserveAspectRatio="none">
+      {/* Roller cylinder */}
+      <ellipse cx={width / 2} cy="11" rx={width / 2} ry="11" fill={color}/>
+      <ellipse cx={width / 2} cy="11" rx={width / 2 - 2} ry="9" fill="none" stroke="rgba(0,0,0,0.15)" strokeWidth="1.5"/>
+      {/* Highlight */}
+      <ellipse cx={width / 2} cy="7" rx={width / 2 - 10} ry="3" fill="rgba(255,255,255,0.12)"/>
+      {/* Shadow under */}
+      <ellipse cx={width / 2} cy="19" rx={width / 2 - 4} ry="3" fill="rgba(0,0,0,0.18)"/>
+    </svg>
+  );
+}
+
+// ── Sello de clan (círculo con kanji) ────────────────────────────────────────
+function ClanSeal({ color, size = 44 }: { color: string; size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="28" fill="none" stroke={color} strokeWidth="3"/>
+      <circle cx="30" cy="30" r="22" fill={color} opacity="0.15"/>
+      <circle cx="30" cy="30" r="26" fill="none" stroke={color} strokeWidth="1" opacity="0.4" strokeDasharray="4 3"/>
+      <text x="30" y="36" textAnchor="middle" fontSize="22" fontWeight="900"
+        fontFamily="serif" fill={color} opacity="0.9">忍</text>
+    </svg>
+  );
+}
+
+// ── Timer badge ──────────────────────────────────────────────────────────────
+function TimerBadge({ minutes }: { minutes: number }) {
+  const [c, bg] = minutes < 5
+    ? ['#166534','rgba(21,128,61,0.2)']
+    : minutes < 10
+    ? ['#92400E','rgba(146,64,14,0.2)']
+    : ['#991B1B','rgba(153,27,27,0.2)'];
+  return (
+    <div style={{ display:'flex', alignItems:'center', gap:4, padding:'3px 9px', borderRadius:20, backgroundColor:bg, border:`1px solid ${c}50` }}>
+      <Clock style={{ width:10, height:10, color:c }}/>
+      <span style={{ color:c, fontWeight:900, fontSize:11, fontFamily:'serif' }}>{minutes}m</span>
     </div>
   );
 }
 
+// ── Componente principal ─────────────────────────────────────────────────────
 export default function KitchenDisplay() {
   const navigate = useNavigate();
   const { orders, markItemReady } = useOrders();
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
-    return () => clearInterval(timer);
+    const t = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(t);
   }, []);
 
-  const getTimeElapsed = (t: string) =>
-    Math.floor((currentTime.getTime() - new Date(t).getTime()) / 60000);
+  const elapsed = (ts: string) =>
+    Math.floor((currentTime.getTime() - new Date(ts).getTime()) / 60000);
 
   const activeOrders = orders.filter(o => o.status !== 'delivered');
+
+  // Parchment palette
+  const P = {
+    base:    '#E8D5A8',
+    light:   '#F0E0B8',
+    dark:    '#C8A870',
+    roller:  '#A07840',
+    text:    '#2A1A08',
+    textFaint:'rgba(80,50,20,0.45)',
+    crease:  'rgba(80,50,20,0.06)',
+  };
 
   return (
     <>
       <style>{`
-        @keyframes kds-shuriken-spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
-        @keyframes kds-chakra-pulse {
-          0%,100% { opacity:0.4; } 50% { opacity:0.9; }
-        }
-        @keyframes kds-kunai-float {
-          0%,100% { transform:translateY(0px) rotate(-40deg); }
-          50%     { transform:translateY(-6px) rotate(-40deg); }
+        @keyframes kds-spin   { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+        @keyframes kds-unspin { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+        @keyframes kds-chakra { 0%,100%{opacity:.35} 50%{opacity:.8} }
+        @keyframes kds-float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+        @keyframes scroll-in  {
+          from { opacity:0; transform:scaleY(0.7) translateY(-10px); }
+          to   { opacity:1; transform:scaleY(1) translateY(0); }
         }
       `}</style>
 
-      <div style={{ minHeight:'100vh', backgroundColor:'#070A0F', color:'#F5EDD8', display:'flex', flexDirection:'column', fontFamily:'-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif' }}>
+      <div style={{ minHeight:'100vh', backgroundColor:'#070A0F', color:P.text, display:'flex', flexDirection:'column', fontFamily:'-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif' }}>
 
         {/* ── HEADER ── */}
-        <header style={{ background:'linear-gradient(90deg,#0A0A08,#15110A,#0A0A08)', borderBottom:'2px solid rgba(255,107,0,0.35)', padding:'10px 16px', display:'flex', alignItems:'center', justifyContent:'space-between', flexShrink:0, boxShadow:'0 4px 20px rgba(0,0,0,0.6)', position:'sticky', top:0, zIndex:10 }}>
+        <header style={{ background:'linear-gradient(90deg,#0A0A08,#15110A,#0A0A08)', borderBottom:'2px solid rgba(255,107,0,0.35)', padding:'10px 16px', display:'flex', alignItems:'center', justifyContent:'space-between', flexShrink:0, position:'sticky', top:0, zIndex:10, boxShadow:'0 4px 20px rgba(0,0,0,0.7)' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <button onClick={() => navigate('/')} style={{ padding:'7px 9px', borderRadius:8, backgroundColor:'rgba(255,107,0,0.1)', border:'1px solid rgba(255,107,0,0.3)', color:'#FF6B00', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', WebkitAppearance:'none' }}>
+            <button onClick={() => navigate('/')} style={{ padding:'7px 9px', borderRadius:8, backgroundColor:'rgba(255,107,0,0.1)', border:'1px solid rgba(255,107,0,0.3)', color:'#FF6B00', cursor:'pointer', display:'flex', alignItems:'center', WebkitAppearance:'none' }}>
               <ArrowLeft style={{ width:18, height:18 }}/>
             </button>
-            <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.5)', borderRadius:10, padding:'5px 8px', boxShadow:'0 0 12px rgba(255,107,0,0.2)' }}>
+            <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.5)', borderRadius:10, padding:'5px 8px' }}>
               <img src={logo} alt="Don de Chuy" style={{ height:36, width:'auto' }}/>
             </div>
             <div>
               <div style={{ display:'flex', alignItems:'center', gap:6 }}>
                 <h1 style={{ fontSize:15, fontWeight:900, color:'#F5EDD8', lineHeight:1 }}>Cocina — KDS</h1>
-                <Shuriken size={14} color="rgba(255,107,0,0.5)" spin/>
+                <Shuriken size={13} color="rgba(255,107,0,0.5)" spin/>
               </div>
-              <p style={{ fontSize:10, color:'rgba(255,107,0,0.5)', letterSpacing:1, marginTop:1 }}>Doton · 土遁 · Aldea Konoha</p>
+              <p style={{ fontSize:10, color:'rgba(255,107,0,0.5)', letterSpacing:1, marginTop:1 }}>Misiones de la Aldea · Konoha</p>
             </div>
           </div>
           <div style={{ textAlign:'right' }}>
             <p style={{ fontSize:24, fontWeight:900, color:'#FF6B00', fontVariantNumeric:'tabular-nums', textShadow:'0 0 12px rgba(255,107,0,0.4)', lineHeight:1 }}>
               {currentTime.toLocaleTimeString('es-HN', { hour:'2-digit', minute:'2-digit' })}
             </p>
-            <p style={{ fontSize:10, color:'rgba(160,144,112,0.6)', marginTop:2, textTransform:'capitalize' }}>
+            <p style={{ fontSize:10, color:'rgba(160,144,112,0.5)', marginTop:2, textTransform:'capitalize' }}>
               {currentTime.toLocaleDateString('es-HN', { weekday:'short', month:'short', day:'numeric' })}
             </p>
           </div>
         </header>
 
         {/* ── STATS BAR ── */}
-        <div style={{ background:'rgba(10,10,8,0.9)', borderBottom:'1px solid rgba(255,107,0,0.1)', padding:'8px 16px', display:'flex', alignItems:'center', gap:20 }}>
+        <div style={{ background:'rgba(10,10,8,0.95)', borderBottom:'1px solid rgba(255,107,0,0.1)', padding:'7px 16px', display:'flex', alignItems:'center', gap:20 }}>
           {[
-            { dot:'#F59E0B', label:'Activos', val: activeOrders.length },
-            { dot:'#22C55E', label:'Listos',  val: orders.filter(o=>o.status==='ready').length },
-            { dot:'rgba(160,144,112,0.4)', label:'Entregados', val: orders.filter(o=>o.status==='delivered').length },
+            { dot:'#F59E0B', label:'Misiones activas', val: activeOrders.length },
+            { dot:'#22C55E', label:'Listas',           val: orders.filter(o => o.status === 'ready').length },
+            { dot:'rgba(160,144,112,0.35)', label:'Completadas', val: orders.filter(o => o.status === 'delivered').length },
           ].map(({ dot, label, val }) => (
             <div key={label} style={{ display:'flex', alignItems:'center', gap:6, fontSize:12 }}>
-              <div style={{ width:7, height:7, borderRadius:'50%', backgroundColor:dot, boxShadow:`0 0 6px ${dot}` }}/>
-              <span style={{ color:'rgba(160,144,112,0.5)' }}>{label}:</span>
-              <span style={{ fontWeight:800, color:'#F5EDD8' }}>{val}</span>
+              <div style={{ width:7, height:7, borderRadius:'50%', backgroundColor:dot, boxShadow:`0 0 5px ${dot}` }}/>
+              <span style={{ color:'rgba(160,144,112,0.45)' }}>{label}:</span>
+              <span style={{ fontWeight:900, color:'#F5EDD8' }}>{val}</span>
             </div>
           ))}
-          {/* Decorative shurikens */}
-          <div style={{ marginLeft:'auto', display:'flex', gap:8, opacity:0.25 }}>
-            <Shuriken size={16} color="rgba(255,107,0,0.8)" spin/>
-            <Shuriken size={14} color="rgba(74,144,217,0.8)"/>
+          <div style={{ marginLeft:'auto', display:'flex', gap:8, opacity:0.2 }}>
+            <Shuriken size={15} color="rgba(255,107,0,0.9)" spin/>
+            <Shuriken size={13} color="rgba(200,168,112,0.9)"/>
           </div>
         </div>
 
-        {/* ── ORDERS GRID ── */}
-        <div style={{ flex:1, padding:14, overflowY:'auto' }}>
+        {/* ── ORDERS ── */}
+        <div style={{ flex:1, padding:16, overflowY:'auto', background:'linear-gradient(180deg,#0A0A0F 0%,#0D0A08 100%)' }}>
           {activeOrders.length === 0 ? (
-            <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:280, gap:16 }}>
-              <div style={{ width:72, height:72, borderRadius:'50%', backgroundColor:'rgba(34,197,94,0.1)', border:'2px solid rgba(34,197,94,0.3)', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 0 24px rgba(34,197,94,0.15)' }}>
-                <CheckCircle style={{ width:36, height:36, color:'rgba(34,197,94,0.7)' }}/>
-              </div>
-              <p style={{ fontSize:18, fontWeight:900, color:'rgba(160,144,112,0.4)' }}>Todo listo — Nakama</p>
-              <p style={{ fontSize:12, color:'rgba(160,144,112,0.25)' }}>Los nuevos pedidos aparecerán aquí</p>
-              <div style={{ display:'flex', gap:12, opacity:0.15, marginTop:8 }}>
-                <Shuriken size={32} color="rgba(255,107,0,0.8)" spin/>
-                <Shuriken size={28} color="rgba(74,144,217,0.8)"/>
-                <Shuriken size={24} color="rgba(255,107,0,0.8)" spin/>
+            <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:300, gap:14 }}>
+              {/* Empty state as a tiny scroll */}
+              <div style={{ position:'relative', width:220 }}>
+                <ScrollEnd color={P.roller} width={220}/>
+                <div style={{ background:`linear-gradient(180deg,${P.dark} 0%,${P.light} 8%,${P.base} 50%,${P.light} 92%,${P.dark} 100%)`, padding:'20px 24px', textAlign:'center' }}>
+                  <div style={{ display:'flex', justifyContent:'center', marginBottom:8 }}>
+                    <ClanSeal color="rgba(100,70,30,0.3)" size={48}/>
+                  </div>
+                  <p style={{ fontSize:15, fontWeight:900, color:'rgba(80,50,20,0.5)', fontFamily:'serif' }}>Sin misiones activas</p>
+                  <p style={{ fontSize:11, color:'rgba(80,50,20,0.35)', marginTop:4 }}>Los pergaminos aparecerán aquí</p>
+                </div>
+                <ScrollEnd color={P.roller} width={220}/>
               </div>
             </div>
           ) : (
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:14 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(270px,1fr))', gap:20 }}>
               {activeOrders.map(order => {
-                const elapsed = getTimeElapsed(order.timestamp);
+                const mins = elapsed(order.timestamp);
                 const checkedCount = order.deliveredItems.length;
                 const totalItems = order.items.length;
                 const allChecked = checkedCount === totalItems;
                 const uc = USER_COLORS[order.sentBy] || DEFAULT_COLOR;
                 const progress = totalItems > 0 ? (checkedCount / totalItems) * 100 : 0;
 
+                // Urgency tint on parchment
+                const urgencyTint = mins >= 15
+                  ? 'rgba(153,27,27,0.08)'
+                  : mins >= 8
+                  ? 'rgba(146,64,14,0.05)'
+                  : 'transparent';
+
                 return (
-                  <div key={order.id} style={{ borderRadius:12, overflow:'hidden', border:`2px solid ${uc.border}`, boxShadow:`0 4px 20px ${uc.glow}, 0 0 0 0 transparent`, display:'flex', flexDirection:'column', backgroundColor:'#0E0E12' }}>
+                  <div key={order.id} style={{ animation:'scroll-in 0.35s ease-out', filter:`drop-shadow(0 6px 20px ${uc.seal}44)` }}>
 
-                    {/* Card header */}
-                    <div style={{ backgroundColor:uc.bg, padding:'12px 14px', position:'relative', overflow:'hidden' }}>
-                      {/* Kanji watermark */}
-                      <div style={{ position:'absolute', right:8, top:-4, fontSize:52, color:'rgba(255,255,255,0.05)', fontWeight:900, fontFamily:'serif', userSelect:'none', lineHeight:1 }}>忍</div>
-                      {/* Headband stripe */}
-                      <div style={{ position:'absolute', top:0, left:0, right:0, height:3, background:`linear-gradient(90deg,transparent,${uc.border},transparent)`, opacity:0.8 }}/>
-
-                      <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', marginBottom:10 }}>
-                        <div>
-                          <h3 style={{ fontSize:22, fontWeight:900, color:'#F5EDD8', lineHeight:1 }}>Pedido {order.id}</h3>
-                          <div style={{ display:'flex', alignItems:'center', gap:5, marginTop:3 }}>
-                            <Clock style={{ width:10, height:10, color:'rgba(255,255,255,0.5)' }}/>
-                            <span style={{ fontSize:10, color:'rgba(255,255,255,0.5)' }}>
-                              {new Date(order.timestamp).toLocaleTimeString('es-HN',{hour:'2-digit',minute:'2-digit'})}
-                            </span>
-                          </div>
-                        </div>
-                        <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:5 }}>
-                          <TimerBadge minutes={elapsed}/>
-                          <div style={{ padding:'2px 8px', borderRadius:20, backgroundColor:'rgba(0,0,0,0.3)', border:'1px solid rgba(255,255,255,0.15)' }}>
-                            <span style={{ fontSize:10, fontWeight:700, color:'rgba(255,255,255,0.8)' }}>
-                              {order.status==='pending'?'⏳ Pendiente':order.status==='preparing'?'🔥 En curso':'✅ Listo'}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div style={{ display:'flex', alignItems:'center', gap:8, backgroundColor:'rgba(0,0,0,0.25)', borderRadius:8, padding:'7px 10px' }}>
-                        <User style={{ width:16, height:16, color:'rgba(255,255,255,0.7)' }}/>
-                        <span style={{ fontSize:17, fontWeight:900, color:'#F5EDD8', letterSpacing:0.5 }}>{order.sentBy||'Ventana'}</span>
-                        <div style={{ marginLeft:'auto', opacity:0.5 }}>
-                          <Shuriken size={14} color="rgba(255,255,255,0.8)"/>
-                        </div>
-                      </div>
+                    {/* ── TOP ROLLER ── */}
+                    <div style={{ position:'relative' }}>
+                      <ScrollEnd color={P.roller} width={280}/>
+                      {/* Cord knot center */}
+                      <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:18, height:18, borderRadius:'50%', backgroundColor:uc.seal, border:`2px solid ${P.roller}`, boxShadow:`0 0 8px ${uc.seal}` }}/>
                     </div>
 
-                    {/* Items */}
-                    <div style={{ flex:1, padding:'10px 10px 4px', display:'flex', flexDirection:'column', gap:6 }}>
-                      {order.items.map(item => {
-                        const done = order.deliveredItems.includes(item.id);
-                        return (
-                          <button key={item.id} onClick={() => markItemReady(order.id, item.id)}
-                            style={{
-                              width:'100%', display:'flex', alignItems:'center', gap:10,
-                              borderRadius:8, padding:'9px 10px', textAlign:'left',
-                              cursor:'pointer', border:'none', WebkitAppearance:'none',
-                              backgroundColor: done ? 'rgba(34,197,94,0.1)' : 'rgba(255,255,255,0.04)',
-                              borderLeft: `3px solid ${done ? '#22C55E' : 'rgba(255,255,255,0.08)'}`,
-                              transition:'all 0.2s',
-                            }}>
-                            {done
-                              ? <CheckSquare style={{ width:18, height:18, color:'#4ADE80', flexShrink:0 }}/>
-                              : <Square style={{ width:18, height:18, color:'rgba(255,255,255,0.2)', flexShrink:0 }}/>
-                            }
-                            <div style={{ flex:1, minWidth:0 }}>
-                              <p style={{ fontWeight:700, fontSize:13, lineHeight:1.2, color: done ? 'rgba(255,255,255,0.25)' : '#F5EDD8', textDecoration: done ? 'line-through' : 'none' }}>
-                                {item.name}
-                              </p>
-                              <p style={{ fontSize:10, color:'rgba(160,144,112,0.4)', marginTop:1 }}>{item.category}</p>
-                            </div>
-                            <div style={{ width:28, height:28, borderRadius:'50%', backgroundColor:'#FF6B00', color:'#0D0D0F', fontWeight:900, display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, flexShrink:0, boxShadow:'0 0 8px rgba(255,107,0,0.3)' }}>
-                              {item.quantity}
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {/* Progress */}
-                    <div style={{ padding:'8px 10px 4px' }}>
-                      <div style={{ display:'flex', justifyContent:'space-between', marginBottom:4 }}>
-                        <span style={{ fontSize:10, color:'rgba(160,144,112,0.4)' }}>Preparados</span>
-                        <span style={{ fontSize:10, fontWeight:700, color:'rgba(160,144,112,0.6)' }}>{checkedCount}/{totalItems}</span>
-                      </div>
-                      <div style={{ height:4, backgroundColor:'rgba(255,255,255,0.06)', borderRadius:4, overflow:'hidden' }}>
-                        <div style={{ height:'100%', backgroundColor: allChecked ? '#22C55E' : '#FF6B00', borderRadius:4, width:`${progress}%`, transition:'width 0.4s ease', boxShadow: allChecked ? '0 0 8px rgba(34,197,94,0.5)' : '0 0 8px rgba(255,107,0,0.5)' }}/>
-                      </div>
-                    </div>
-
-                    {/* Footer status */}
+                    {/* ── PARCHMENT BODY ── */}
                     <div style={{
-                      padding:'9px 14px', display:'flex', alignItems:'center', justifyContent:'center', gap:6,
-                      backgroundColor: allChecked ? 'rgba(34,197,94,0.15)' : checkedCount>0 ? 'rgba(245,158,11,0.1)' : 'rgba(255,255,255,0.03)',
-                      borderTop: `1px solid ${allChecked ? 'rgba(34,197,94,0.3)' : checkedCount>0 ? 'rgba(245,158,11,0.2)' : 'rgba(255,255,255,0.05)'}`,
-                      fontSize:11, fontWeight:700,
-                      color: allChecked ? '#4ADE80' : checkedCount>0 ? '#FCD34D' : 'rgba(160,144,112,0.3)',
+                      background: `linear-gradient(180deg,
+                        ${P.dark} 0%,
+                        ${P.light} 4%,
+                        ${P.base} 15%,
+                        ${P.light} 50%,
+                        ${P.base} 85%,
+                        ${P.light} 96%,
+                        ${P.dark} 100%)`,
+                      position:'relative', overflow:'hidden',
+                      boxShadow:`inset 0 0 0 1px rgba(80,50,20,0.15), inset 2px 0 8px rgba(80,50,20,0.1), inset -2px 0 8px rgba(80,50,20,0.1)`,
                     }}>
-                      <CheckCircle style={{ width:12, height:12 }}/>
-                      {allChecked ? '✦ Listo · Esperando entrega' :
-                       checkedCount>0 ? `🔥 En preparación (${checkedCount}/${totalItems})` :
-                       'Pendiente de preparar'}
+                      {/* Urgency tint overlay */}
+                      {urgencyTint !== 'transparent' && (
+                        <div style={{ position:'absolute', inset:0, backgroundColor:urgencyTint, pointerEvents:'none', zIndex:0 }}/>
+                      )}
+
+                      {/* Vertical crease lines */}
+                      <div style={{ position:'absolute', inset:0, pointerEvents:'none', zIndex:0 }}>
+                        <div style={{ position:'absolute', left:'30%', top:0, bottom:0, width:1, backgroundColor:P.crease }}/>
+                        <div style={{ position:'absolute', left:'70%', top:0, bottom:0, width:1, backgroundColor:P.crease }}/>
+                        <div style={{ position:'absolute', top:'40%', left:0, right:0, height:1, backgroundColor:P.crease }}/>
+                      </div>
+
+                      {/* Decorative shurikens watermark */}
+                      <div style={{ position:'absolute', right:10, top:10, opacity:0.06, pointerEvents:'none', zIndex:0 }}>
+                        <Shuriken size={60} color={uc.ink}/>
+                      </div>
+
+                      <div style={{ position:'relative', zIndex:1, padding:'14px 16px 10px' }}>
+
+                        {/* ── HEADER ROW ── */}
+                        <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', marginBottom:10 }}>
+                          <div>
+                            <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:3 }}>
+                              <ClanSeal color={uc.seal} size={32}/>
+                              <div>
+                                <p style={{ fontSize:11, fontWeight:700, color:uc.seal, letterSpacing:1, textTransform:'uppercase', fontFamily:'serif' }}>Misión</p>
+                                <h3 style={{ fontSize:22, fontWeight:900, color:uc.ink, lineHeight:1, fontFamily:'serif' }}>{order.id}</h3>
+                              </div>
+                            </div>
+                            <div style={{ display:'flex', alignItems:'center', gap:4 }}>
+                              <Clock style={{ width:10, height:10, color:P.textFaint }}/>
+                              <span style={{ fontSize:10, color:P.textFaint, fontFamily:'serif' }}>
+                                {new Date(order.timestamp).toLocaleTimeString('es-HN',{hour:'2-digit',minute:'2-digit'})}
+                              </span>
+                            </div>
+                          </div>
+                          <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:5 }}>
+                            <TimerBadge minutes={mins}/>
+                            <div style={{ padding:'2px 8px', borderRadius:20, backgroundColor:`${uc.seal}18`, border:`1px solid ${uc.seal}40` }}>
+                              <span style={{ fontSize:10, fontWeight:800, color:uc.seal, fontFamily:'serif' }}>
+                                {order.status==='pending'?'⏳ Pendiente':order.status==='preparing'?'🔥 Preparando':'✅ Listo'}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* ── NINJA ASSIGNED ── */}
+                        <div style={{ display:'flex', alignItems:'center', gap:8, backgroundColor:`${uc.seal}14`, border:`1px solid ${uc.seal}30`, borderRadius:8, padding:'7px 10px', marginBottom:12 }}>
+                          <User style={{ width:14, height:14, color:uc.seal }}/>
+                          <span style={{ fontSize:15, fontWeight:900, color:uc.ink, fontFamily:'serif', letterSpacing:0.5 }}>{order.sentBy || 'Ventana'}</span>
+                          <div style={{ marginLeft:'auto', width:20, height:20, borderRadius:'50%', backgroundColor:uc.seal, border:`2px solid ${P.dark}` }}/>
+                        </div>
+
+                        {/* ── DIVIDER: brush stroke ── */}
+                        <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:10 }}>
+                          <div style={{ flex:1, height:1, background:`linear-gradient(90deg,transparent,${uc.seal}50,transparent)` }}/>
+                          <Shuriken size={10} color={`${uc.seal}60`}/>
+                          <div style={{ flex:1, height:1, background:`linear-gradient(90deg,transparent,${uc.seal}50,transparent)` }}/>
+                        </div>
+
+                        {/* ── ITEMS ── */}
+                        <div style={{ display:'flex', flexDirection:'column', gap:5, marginBottom:12 }}>
+                          {order.items.map(item => {
+                            const done = order.deliveredItems.includes(item.id);
+                            return (
+                              <button key={item.id} onClick={() => markItemReady(order.id, item.id)}
+                                style={{
+                                  width:'100%', display:'flex', alignItems:'center', gap:8,
+                                  borderRadius:7, padding:'8px 10px', textAlign:'left',
+                                  cursor:'pointer', border:'none', WebkitAppearance:'none',
+                                  backgroundColor: done ? `${uc.seal}14` : 'rgba(80,50,20,0.07)',
+                                  borderLeft:`3px solid ${done ? uc.seal : 'rgba(80,50,20,0.2)'}`,
+                                  transition:'all 0.2s',
+                                }}>
+                                {done
+                                  ? <CheckSquare style={{ width:16, height:16, color:uc.seal, flexShrink:0 }}/>
+                                  : <Square style={{ width:16, height:16, color:'rgba(80,50,20,0.25)', flexShrink:0 }}/>
+                                }
+                                <div style={{ flex:1, minWidth:0 }}>
+                                  <p style={{ fontWeight:800, fontSize:13, lineHeight:1.2, color: done ? `${uc.ink}55` : uc.ink, textDecoration: done ? 'line-through' : 'none', fontFamily:'serif' }}>
+                                    {item.name}
+                                  </p>
+                                  <p style={{ fontSize:9, color:P.textFaint, marginTop:1, fontFamily:'serif' }}>{item.category}</p>
+                                </div>
+                                <div style={{ width:26, height:26, borderRadius:'50%', backgroundColor:uc.seal, color:'#F5EDD8', fontWeight:900, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, flexShrink:0, fontFamily:'serif', boxShadow:`0 0 6px ${uc.seal}60` }}>
+                                  {item.quantity}
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {/* ── PROGRESS ── */}
+                        <div style={{ marginBottom:8 }}>
+                          <div style={{ display:'flex', justifyContent:'space-between', marginBottom:4 }}>
+                            <span style={{ fontSize:10, color:P.textFaint, fontFamily:'serif' }}>Progreso de la misión</span>
+                            <span style={{ fontSize:10, fontWeight:800, color:uc.seal, fontFamily:'serif' }}>{checkedCount}/{totalItems}</span>
+                          </div>
+                          <div style={{ height:5, backgroundColor:'rgba(80,50,20,0.12)', borderRadius:4, overflow:'hidden', border:'1px solid rgba(80,50,20,0.15)' }}>
+                            <div style={{ height:'100%', backgroundColor:uc.seal, borderRadius:4, width:`${progress}%`, transition:'width 0.4s ease', boxShadow:`0 0 6px ${uc.seal}80` }}/>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      {/* ── STATUS FOOTER (on parchment) ── */}
+                      <div style={{
+                        padding:'8px 16px',
+                        borderTop:`1px solid ${uc.seal}25`,
+                        display:'flex', alignItems:'center', justifyContent:'center', gap:6,
+                        backgroundColor: allChecked ? `${uc.seal}18` : 'rgba(80,50,20,0.06)',
+                      }}>
+                        <CheckCircle style={{ width:12, height:12, color: allChecked ? uc.seal : P.textFaint }}/>
+                        <span style={{ fontSize:11, fontWeight:800, color: allChecked ? uc.seal : P.textFaint, fontFamily:'serif' }}>
+                          {allChecked
+                            ? '✦ Misión completa · Entregar en Ventana'
+                            : checkedCount > 0
+                            ? `🔥 En preparación · ${checkedCount}/${totalItems}`
+                            : 'Esperando preparación'}
+                        </span>
+                      </div>
+
                     </div>
+                    {/* ── BOTTOM ROLLER ── */}
+                    <div style={{ position:'relative' }}>
+                      <ScrollEnd color={P.roller} width={280}/>
+                      <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:18, height:18, borderRadius:'50%', backgroundColor:uc.seal, border:`2px solid ${P.roller}`, boxShadow:`0 0 8px ${uc.seal}` }}/>
+                    </div>
+
                   </div>
                 );
               })}
