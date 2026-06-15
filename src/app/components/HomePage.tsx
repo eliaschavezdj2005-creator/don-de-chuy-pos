@@ -3,6 +3,7 @@ import { ShoppingCart, ChefHat, Zap } from 'lucide-react';
 import { useOrders } from './OrderContext';
 import { useState } from 'react';
 import logo from '../../imports/image-1.png';
+import konohaImg from '../../imports/image-22.png';
 
 function LeafSymbol({ size = 32, color = '#FF6B00', opacity = 1 }: { size?: number; color?: string; opacity?: number }) {
   return (
@@ -113,92 +114,49 @@ export default function HomePage() {
       )}
 
       <div style={{
-        minHeight:'100vh', backgroundColor:'#070A0F',
+        minHeight:'100vh',
         display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
         padding:'20px 16px', position:'relative', overflow:'hidden',
         fontFamily:'-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif',
       }}>
 
-        {/* ── BACKGROUND ── */}
-        <div style={{ position:'absolute', inset:0, pointerEvents:'none', overflow:'hidden' }}>
-          {/* Stars */}
-          {Array.from({ length: 40 }, (_, i) => (
-            <div key={i} style={{
-              position:'absolute', left:`${(i*37+11)%100}%`, top:`${(i*53+7)%62}%`,
-              width:i%5===0?3:2, height:i%5===0?3:2, borderRadius:'50%',
-              backgroundColor:'#E8E0CC', opacity:0.25+(i%4)*0.12,
-            }}/>
-          ))}
-
-          {/* Moon */}
-          <div style={{
-            position:'absolute', top:18, right:26,
-            width:50, height:50, borderRadius:'50%',
-            backgroundColor:'#F0E8C8',
-            boxShadow:'0 0 28px rgba(240,232,200,0.35),0 0 56px rgba(240,232,200,0.12)',
+        {/* ── BACKGROUND: Konoha village image ── */}
+        <div style={{ position:'absolute', inset:0, pointerEvents:'none' }}>
+          {/* La imagen real de la aldea */}
+          <img src={konohaImg} alt="Aldea Konoha" style={{
+            width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 30%',
+            display:'block',
           }}/>
+          {/* Overlay oscuro para legibilidad */}
+          <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg, rgba(5,8,15,0.55) 0%, rgba(5,8,15,0.3) 40%, rgba(5,8,15,0.65) 70%, rgba(5,8,15,0.92) 100%)' }}/>
+          {/* Vignette lateral */}
+          <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse at center, transparent 40%, rgba(5,8,15,0.5) 100%)' }}/>
+        </div>
 
-          {/* Hokage Rock */}
-          <svg style={{ position:'absolute', bottom:58, left:0, right:0, width:'100%', height:130, opacity:0.15 }}
-            viewBox="0 0 400 130" preserveAspectRatio="none">
-            <rect x="0" y="55" width="400" height="75" fill="#1A1510"/>
-            <ellipse cx="58"  cy="50" rx="27" ry="33" fill="#1A1510"/>
-            <ellipse cx="138" cy="44" rx="27" ry="35" fill="#1A1510"/>
-            <ellipse cx="218" cy="42" rx="27" ry="37" fill="#1A1510"/>
-            <ellipse cx="298" cy="46" rx="27" ry="34" fill="#1A1510"/>
-            <rect x="33" y="34" width="50" height="7" fill="#2C2C3A" rx="2"/>
-            <rect x="113" y="28" width="50" height="7" fill="#2C2C3A" rx="2"/>
-            <rect x="193" y="25" width="50" height="7" fill="#2C2C3A" rx="2"/>
-            <rect x="273" y="30" width="50" height="7" fill="#2C2C3A" rx="2"/>
-          </svg>
-
-          {/* Village silhouette */}
-          <svg style={{ position:'absolute', bottom:0, left:0, right:0, width:'100%', height:72 }}
-            viewBox="0 0 400 72" preserveAspectRatio="none">
-            <polygon points="0,72 0,50 12,50 12,26 22,26 22,50 45,50 45,36 58,18 71,36 71,50 100,50 100,42 110,32 120,42 120,50 148,50 148,28 161,13 174,28 174,50 200,50 200,38 212,25 224,38 224,50 248,50 248,34 261,18 274,34 274,50 298,50 298,42 310,30 322,42 322,50 348,50 348,44 360,33 372,44 372,50 400,50 400,72" fill="#0A0A0F"/>
-          </svg>
-
-          {/* Decorative kunais — corners */}
-          <div style={{ position:'absolute', top:60, left:12, opacity:0.45, '--r':'-35deg' } as any}>
-            <Kunai size={28} rotate={-35} color="rgba(160,160,185,0.55)"/>
+        {/* Kunais decorativos encima del fondo */}
+        <div style={{ position:'absolute', inset:0, pointerEvents:'none', overflow:'hidden' }}>
+          <div style={{ position:'absolute', top:'22%', left:10, opacity:0.5 }}>
+            <Kunai size={24} rotate={-30} color="rgba(200,180,140,0.7)"/>
           </div>
-          <div style={{ position:'absolute', top:80, right:14, opacity:0.4, '--r':'40deg' } as any}>
-            <Kunai size={24} rotate={140} color="rgba(160,160,185,0.5)"/>
+          <div style={{ position:'absolute', top:'25%', right:12, opacity:0.45 }}>
+            <Kunai size={22} rotate={150} color="rgba(200,180,140,0.65)"/>
           </div>
-          <div style={{ position:'absolute', top:'38%', left:8, opacity:0.3 }}>
-            <Kunai size={20} rotate={-20} color="rgba(255,107,0,0.4)"/>
+          <div style={{ position:'absolute', top:16, left:'22%', opacity:0.25 }}>
+            <Shuriken size={22} color="rgba(255,200,100,0.6)" rotate={0}/>
           </div>
-          <div style={{ position:'absolute', top:'42%', right:10, opacity:0.3 }}>
-            <Kunai size={22} rotate={160} color="rgba(74,144,217,0.4)"/>
+          <div style={{ position:'absolute', top:20, right:'24%', opacity:0.22 }}>
+            <Shuriken size={18} color="rgba(255,200,100,0.6)" rotate={25}/>
           </div>
-
-          {/* Decorative shurikens */}
-          <div style={{ position:'absolute', top:40, left:'18%', opacity:0.2 }}>
-            <Shuriken size={28} color="rgba(160,160,185,0.6)" rotate={15}/>
-          </div>
-          <div style={{ position:'absolute', top:55, right:'20%', opacity:0.18 }}>
-            <Shuriken size={24} color="rgba(255,107,0,0.5)" rotate={0}/>
-          </div>
-          <div style={{ position:'absolute', top:'30%', left:'5%', opacity:0.15 }}>
-            <Shuriken size={20} color="rgba(74,144,217,0.5)" rotate={45}/>
-          </div>
-
-          {/* Chakra particles */}
-          {[12,28,45,62,78].map((left,i) => (
+          {/* Partículas de chakra */}
+          {[15,35,55,72].map((left,i) => (
             <div key={i} style={{
-              position:'absolute', left:`${left}%`, bottom:72,
+              position:'absolute', left:`${left}%`, bottom:60,
               width:4, height:4, borderRadius:'50%',
               backgroundColor:i%2===0?'#FF6B00':'#4A90D9',
               animation:`float-up ${3+i}s ease-in ${i*0.9}s infinite`,
               boxShadow:`0 0 6px ${i%2===0?'#FF6B00':'#4A90D9'}`,
             }}/>
           ))}
-
-          {/* Ground glow */}
-          <div style={{
-            position:'absolute', bottom:0, left:0, right:0, height:55,
-            background:'linear-gradient(0deg,rgba(74,144,217,0.06) 0%,transparent 100%)',
-          }}/>
         </div>
 
         {/* ── CONTENT ── */}

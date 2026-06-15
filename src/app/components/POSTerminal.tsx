@@ -349,86 +349,84 @@ function OrderCard({ order, onDeliver, onPay, onMarkItem, isDelivered }: {
         <div style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:14, height:14, borderRadius:'50%', backgroundColor:seal.color, border:`2px solid ${rollerColor}` }}/>
       </div>
 
-      {/* Parchment */}
+      {/* Parchment — fondo blanco, texto grande */}
       <div style={{
-        background:'linear-gradient(180deg,#D4B896 0%,#ECD8B0 5%,#F0E0B8 30%,#ECD8B0 70%,#E0C890 95%,#C8A870 100%)',
+        backgroundColor:'#FFFFFF',
         position:'relative', overflow:'hidden',
-        boxShadow:'inset 2px 0 6px rgba(80,50,20,0.1), inset -2px 0 6px rgba(80,50,20,0.1)',
+        borderLeft:`3px solid ${seal.color}`,
+        borderRight:`3px solid ${seal.color}`,
       }}>
-        {/* Crease lines */}
-        <div style={{ position:'absolute', left:'33%', top:0, bottom:0, width:1, backgroundColor:'rgba(80,50,20,0.05)', pointerEvents:'none' }}/>
-        <div style={{ position:'absolute', left:'66%', top:0, bottom:0, width:1, backgroundColor:'rgba(80,50,20,0.05)', pointerEvents:'none' }}/>
-
         {/* Header */}
-        <div style={{ padding:'8px 10px 6px', borderBottom:'1px solid rgba(80,50,20,0.15)' }}>
+        <div style={{ padding:'10px 12px 8px', borderBottom:`1px solid ${seal.color}20` }}>
           <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
             <div>
-              <p style={{ fontWeight:900, fontSize:14, color:'#2A1A08', lineHeight:1, fontFamily:'serif' }}>{order.id}</p>
-              <div style={{ display:'flex', alignItems:'center', gap:5, marginTop:2 }}>
-                <User style={{ width:9, height:9, color:'rgba(80,50,20,0.5)' }}/>
-                <span style={{ fontSize:9, color:'rgba(80,50,20,0.6)', fontFamily:'serif' }}>{order.sentBy}</span>
-                <Clock style={{ width:9, height:9, color:'rgba(80,50,20,0.5)', marginLeft:2 }}/>
-                <span style={{ fontSize:9, color:'rgba(80,50,20,0.5)', fontFamily:'serif' }}>
+              <p style={{ fontWeight:900, fontSize:17, color:'#1A1A1A', lineHeight:1 }}>{order.id}</p>
+              <div style={{ display:'flex', alignItems:'center', gap:5, marginTop:3 }}>
+                <User style={{ width:11, height:11, color:'#888' }}/>
+                <span style={{ fontSize:12, color:'#555', fontWeight:600 }}>{order.sentBy}</span>
+                <Clock style={{ width:11, height:11, color:'#888', marginLeft:2 }}/>
+                <span style={{ fontSize:12, color:'#666' }}>
                   {new Date(order.timestamp).toLocaleTimeString('es-HN',{hour:'2-digit',minute:'2-digit'})}
                 </span>
               </div>
             </div>
-            <div style={{ padding:'2px 7px', borderRadius:20, backgroundColor:`${seal.color}18`, border:`1px solid ${seal.color}40` }}>
-              <span style={{ fontSize:9, fontWeight:800, color:seal.color, fontFamily:'serif' }}>{seal.label}</span>
+            <div style={{ padding:'3px 9px', borderRadius:20, backgroundColor:seal.color }}>
+              <span style={{ fontSize:10, fontWeight:800, color:'#fff' }}>{seal.label}</span>
             </div>
           </div>
         </div>
 
         {/* Items */}
-        <div style={{ padding:'6px 8px', display:'flex', flexDirection:'column', gap:3 }}>
+        <div style={{ padding:'8px 10px', display:'flex', flexDirection:'column', gap:4 }}>
           {order.items.map(item => {
             const done = order.deliveredItems.includes(item.id);
             return (
               <button key={item.id} onClick={() => !isDelivered && onMarkItem(item.id)}
                 style={{
-                  width:'100%', display:'flex', alignItems:'center', gap:6, padding:'5px 7px',
-                  borderRadius:6, textAlign:'left', minHeight:32, border:'none', WebkitAppearance:'none',
+                  width:'100%', display:'flex', alignItems:'center', gap:8, padding:'7px 8px',
+                  borderRadius:7, textAlign:'left', minHeight:36,
+                  border:`1.5px solid ${done ? seal.color : '#EBEBEB'}`,
+                  WebkitAppearance:'none',
                   cursor: isDelivered ? 'default' : 'pointer',
-                  backgroundColor: done ? 'rgba(22,101,52,0.12)' : 'rgba(80,50,20,0.06)',
-                  borderLeft:`2px solid ${done ? '#166534' : 'rgba(80,50,20,0.18)'}`,
+                  backgroundColor: done ? `${seal.color}10` : '#F8F8F8',
                   transition:'all 0.15s',
                 }}>
                 {done
-                  ? <CheckSquare style={{ width:12, height:12, color:'#166534', flexShrink:0 }}/>
-                  : <Square style={{ width:12, height:12, color:'rgba(80,50,20,0.25)', flexShrink:0 }}/>}
-                <span style={{ flex:1, fontSize:11, fontWeight:700, color: done ? 'rgba(80,50,20,0.35)' : '#2A1A08', textDecoration: done ? 'line-through' : 'none', fontFamily:'serif', lineHeight:1.2 }}>
+                  ? <CheckSquare style={{ width:15, height:15, color:seal.color, flexShrink:0 }}/>
+                  : <Square style={{ width:15, height:15, color:'#CCC', flexShrink:0 }}/>}
+                <span style={{ flex:1, fontSize:13, fontWeight:700, color: done ? '#AAA' : '#1A1A1A', textDecoration: done ? 'line-through' : 'none', lineHeight:1.3 }}>
                   {item.quantity}× {item.name}
                 </span>
-                <span style={{ fontSize:10, fontWeight:900, color:'#92400E', fontFamily:'serif' }}>L.{(item.price*item.quantity).toFixed(2)}</span>
+                <span style={{ fontSize:12, fontWeight:900, color:'#CC3D00' }}>L.{(item.price*item.quantity).toFixed(2)}</span>
               </button>
             );
           })}
         </div>
 
         {/* Footer */}
-        <div style={{ padding:'6px 10px 8px', borderTop:'1px solid rgba(80,50,20,0.12)' }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:6 }}>
-            <span style={{ fontSize:10, fontWeight:700, color:'rgba(80,50,20,0.5)', fontFamily:'serif' }}>Total misión:</span>
-            <span style={{ fontWeight:900, color:'#92400E', fontSize:15, fontFamily:'serif' }}>L.{order.total.toFixed(2)}</span>
+        <div style={{ padding:'8px 12px 10px', borderTop:`1px solid ${seal.color}20` }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
+            <span style={{ fontSize:12, fontWeight:700, color:'#666' }}>Total misión:</span>
+            <span style={{ fontWeight:900, color:'#CC3D00', fontSize:17 }}>L.{order.total.toFixed(2)}</span>
           </div>
           {!isDelivered && (
-            <div className="flex gap-1.5">
+            <div className="flex gap-2">
               <button onClick={onDeliver}
                 className="flex-1 flex items-center justify-center gap-1 active:scale-95 transition-all"
-                style={{ padding:'7px 4px', backgroundColor:'rgba(80,50,20,0.1)', border:'1px solid rgba(80,50,20,0.25)', borderRadius:7, color:'#2A1A08', fontWeight:800, fontSize:10, cursor:'pointer', minHeight:38, WebkitAppearance:'none', fontFamily:'serif' }}>
-                <PackageCheck style={{ width:11, height:11 }}/>Entregar
+                style={{ padding:'8px 4px', backgroundColor:'#F5F5F5', border:'1.5px solid #DDD', borderRadius:8, color:'#333', fontWeight:800, fontSize:12, cursor:'pointer', minHeight:40, WebkitAppearance:'none' }}>
+                <PackageCheck style={{ width:13, height:13 }}/>Entregar
               </button>
               <button onClick={onPay}
                 className="flex-[2] flex items-center justify-center gap-1 active:scale-95 transition-all"
-                style={{ padding:'7px 4px', background:'linear-gradient(135deg,#CC3D00,#FF6B00)', border:'none', borderRadius:7, color:'#F5EDD8', fontWeight:900, fontSize:10, cursor:'pointer', minHeight:38, WebkitAppearance:'none', fontFamily:'serif', boxShadow:'0 0 10px rgba(255,107,0,0.3)' }}>
-                <Banknote style={{ width:11, height:11 }}/>💰 Cobrar
+                style={{ padding:'8px 4px', background:'linear-gradient(135deg,#CC3D00,#FF6B00)', border:'none', borderRadius:8, color:'#fff', fontWeight:900, fontSize:12, cursor:'pointer', minHeight:40, WebkitAppearance:'none', boxShadow:'0 2px 10px rgba(255,107,0,0.4)' }}>
+                <Banknote style={{ width:13, height:13 }}/>💰 Cobrar
             </button>
           </div>
         )}
         {isDelivered && (
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:5, padding:'6px 0', color:'rgba(80,50,20,0.4)', fontSize:11, fontFamily:'serif' }}>
-            <CheckCircle style={{ width:11, height:11, color:'#166534' }}/>
-            <span style={{ fontWeight:800 }}>Misión completada</span>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:5, padding:'6px 0', color:'#888', fontSize:12 }}>
+            <CheckCircle style={{ width:13, height:13, color:'#166534' }}/>
+            <span style={{ fontWeight:700 }}>Misión completada</span>
           </div>
         )}
       </div>{/* /footer */}
