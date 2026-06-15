@@ -568,43 +568,56 @@ export default function POSTerminal() {
   // ── Login ────────────────────────────────────────────────────────────────────
   if (!isLoggedIn) {
     return (
-      <div className="h-screen flex bg-[#111111]">
-        {/* Left branding panel */}
-        <div className="hidden md:flex md:w-1/2 bg-primary flex-col items-center justify-center p-12">
-          <div className="bg-white rounded-3xl p-8 shadow-2xl mb-8">
-            <img src={logo} alt="Don de Chuy" className="w-40 h-auto"/>
+      <div className="h-screen flex" style={{ backgroundColor:'#070A0F' }}>
+        {/* Left — Konoha branding */}
+        <div className="hidden md:flex md:w-2/5 flex-col items-center justify-center p-10 relative overflow-hidden" style={{ background:'linear-gradient(160deg,#0A0F1A 0%,#101828 100%)', borderRight:'1px solid rgba(255,107,0,0.2)' }}>
+          {/* Shurikens bg */}
+          {[{t:'12%',l:'8%',s:44,r:0},{t:'55%',l:'72%',s:36,r:20},{t:'78%',l:'15%',s:28,r:10},{t:'28%',l:'80%',s:32,r:45}].map((p,i)=>(
+            <div key={i} style={{ position:'absolute', top:p.t, left:p.l, opacity:0.08 }}>
+              <svg width={p.s} height={p.s} viewBox="0 0 100 100" style={{ animation:`shuriken-spin ${8+i*2}s linear infinite` }}>
+                <polygon points="50,5 58,40 95,50 58,60 50,95 42,60 5,50 42,40" fill="rgba(255,107,0,0.8)"/>
+              </svg>
+            </div>
+          ))}
+          <div style={{ position:'relative', marginBottom:24 }}>
+            <div style={{ position:'absolute', inset:-16, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,107,0,0.15) 0%,transparent 70%)', filter:'blur(8px)' }}/>
+            <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'3px solid #FF6B00', borderRadius:20, padding:24, boxShadow:'0 0 32px rgba(255,107,0,0.3)', position:'relative' }}>
+              <img src={logo} alt="Don de Chuy" style={{ width:100, height:'auto', filter:'drop-shadow(0 0 10px rgba(255,107,0,0.5))' }}/>
+            </div>
           </div>
-          <h1 className="text-3xl font-bold text-primary-foreground mb-2">Don de Chuy</h1>
-          <p className="text-primary-foreground/70 text-sm tracking-widest uppercase">Sistema de Gestión</p>
+          <h1 style={{ fontSize:24, fontWeight:900, color:'#F5EDD8', marginBottom:6, textShadow:'0 0 16px rgba(255,107,0,0.4)' }}>Don de Chuy</h1>
+          <div style={{ display:'flex', alignItems:'center', gap:8, background:'linear-gradient(90deg,#1C1C28,#2C2C40,#1C1C28)', borderTop:'2px solid #6A6A8A', borderBottom:'2px solid #6A6A8A', padding:'4px 14px' }}>
+            <span style={{ color:'#9090B8', fontSize:10, letterSpacing:3, textTransform:'uppercase', fontWeight:700 }}>Katon · Terminal POS</span>
+          </div>
         </div>
 
-        {/* Right login form */}
-        <div className="flex-1 flex flex-col items-center justify-center p-6 bg-white">
-          <button onClick={() => navigate('/')} className="self-start mb-8 flex items-center gap-2 text-gray-400 hover:text-gray-700 text-sm min-h-[44px]">
+        {/* Right — login */}
+        <div className="flex-1 flex flex-col items-center justify-center p-6" style={{ backgroundColor:'#0D0D0F' }}>
+          <button onClick={() => navigate('/')} className="self-start mb-8 flex items-center gap-2 min-h-[44px]" style={{ color:'rgba(255,107,0,0.6)', fontSize:13 }}>
             <ArrowLeft className="w-4 h-4"/>Regresar
           </button>
           <div className="w-full max-w-sm">
-            <div className="text-center mb-8 md:hidden">
-              <div className="bg-gray-50 rounded-2xl p-4 inline-block mb-4 shadow-inner">
-                <img src={logo} alt="Don de Chuy" className="w-24 h-auto"/>
+            <div className="text-center mb-6 md:hidden">
+              <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.4)', borderRadius:14, padding:14, display:'inline-block', marginBottom:12 }}>
+                <img src={logo} alt="Don de Chuy" style={{ width:70, height:'auto' }}/>
               </div>
             </div>
-            <h2 className="text-2xl font-bold mb-1 text-gray-900">Bienvenido</h2>
-            <p className="text-gray-400 text-sm mb-8">Ingresa tus credenciales para continuar</p>
+            <h2 style={{ fontSize:22, fontWeight:900, color:'#F5EDD8', marginBottom:4 }}>Identificación Ninja</h2>
+            <p style={{ color:'rgba(160,144,112,0.6)', fontSize:13, marginBottom:24 }}>Ingresa tus credenciales para continuar</p>
             <div className="space-y-4">
               <div>
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1.5 block">Usuario</label>
-                <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Tu nombre de usuario"
-                  className="w-full px-4 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary outline-none text-base"/>
+                <label style={{ fontSize:10, fontWeight:700, color:'rgba(255,107,0,0.6)', textTransform:'uppercase', letterSpacing:2, display:'block', marginBottom:6 }}>Usuario</label>
+                <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Nombre ninja"
+                  style={{ width:'100%', padding:'14px 16px', borderRadius:10, border:'1px solid rgba(255,107,0,0.3)', backgroundColor:'#1A1510', color:'#F5EDD8', outline:'none', fontSize:15, boxSizing:'border-box' }}/>
               </div>
               <div>
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1.5 block">Contraseña</label>
+                <label style={{ fontSize:10, fontWeight:700, color:'rgba(255,107,0,0.6)', textTransform:'uppercase', letterSpacing:2, display:'block', marginBottom:6 }}>Contraseña</label>
                 <input type="password" value={password} onChange={e => setPassword(e.target.value)}
-                  onKeyPress={e => e.key === 'Enter' && handleLogin()} placeholder="Tu contraseña"
-                  className="w-full px-4 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary outline-none text-base"/>
+                  onKeyPress={e => e.key === 'Enter' && handleLogin()} placeholder="Código secreto"
+                  style={{ width:'100%', padding:'14px 16px', borderRadius:10, border:'1px solid rgba(255,107,0,0.3)', backgroundColor:'#1A1510', color:'#F5EDD8', outline:'none', fontSize:15, boxSizing:'border-box' }}/>
               </div>
-              <button onClick={handleLogin} className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl hover:opacity-90 text-base shadow-md min-h-[56px] mt-2">
-                Iniciar Sesión
+              <button onClick={handleLogin} style={{ width:'100%', padding:'14px', background:'linear-gradient(135deg,#FF6B00,#CC3D00)', color:'#0D0D0F', fontWeight:900, borderRadius:10, border:'none', fontSize:15, cursor:'pointer', boxShadow:'0 0 20px rgba(255,107,0,0.35)', WebkitAppearance:'none', marginTop:4 }}>
+                🔥 Activar Jutsu
               </button>
             </div>
           </div>
@@ -615,8 +628,8 @@ export default function POSTerminal() {
 
   // ── Cart panel ───────────────────────────────────────────────────────────────
   const CartPanel = (
-    <div className="flex flex-col h-full bg-gradient-to-b from-gray-50 to-white">
-      <div className="px-4 py-3 bg-gradient-to-r from-gray-900 to-black border-b-2 border-gray-700 flex items-center justify-between shadow-md">
+    <div className="flex flex-col h-full" style={{ backgroundColor:'#0D0D0F' }}>
+      <div className="px-4 py-3 flex items-center justify-between" style={{ background:'linear-gradient(90deg,#0A0A08,#1E1200,#0A0A08)', borderBottom:'1px solid rgba(255,107,0,0.3)' }}>
         <div className="flex items-center gap-2">
           <ShoppingCart className="w-5 h-5 text-primary"/>
           <span className="font-bold text-base text-white">Pedido</span>
@@ -641,9 +654,9 @@ export default function POSTerminal() {
 
       <div className="flex-1 overflow-auto p-3 space-y-2">
         {cart.length === 0 ? (
-          <div className="text-center text-gray-300 py-12">
-            <ShoppingCart className="w-10 h-10 mx-auto mb-2"/>
-            <p className="text-sm">Sin artículos</p>
+          <div className="text-center py-12" style={{ color:'rgba(160,144,112,0.4)' }}>
+            <ShoppingCart className="w-10 h-10 mx-auto mb-2" style={{ color:'rgba(255,107,0,0.25)' }}/>
+            <p className="text-sm">Sin misiones aún</p>
           </div>
         ) : (
           <>
@@ -663,32 +676,34 @@ export default function POSTerminal() {
         )}
       </div>
 
-      <div className="p-3 border-t border-gray-200 space-y-2.5 bg-white">
+      <div className="p-3 space-y-2.5" style={{ borderTop:'1px solid rgba(255,107,0,0.2)', backgroundColor:'#0D0D0F' }}>
         {/* Número de factura */}
         <div className="flex items-center gap-2">
-          <Receipt className="w-4 h-4 text-gray-400 shrink-0"/>
+          <Receipt className="w-4 h-4 shrink-0" style={{ color:'rgba(255,107,0,0.5)' }}/>
           <input
             type="text"
             placeholder="# Factura (opcional)"
             value={invoiceNumber}
             onChange={e => setInvoiceNumber(e.target.value)}
-            className="flex-1 text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-primary/40 bg-gray-50"
+            style={{ flex:1, fontSize:13, border:'1px solid rgba(255,107,0,0.25)', borderRadius:7, padding:'6px 10px', outline:'none', backgroundColor:'#1A1510', color:'#F5EDD8' }}
           />
         </div>
-        <div className="flex justify-between items-center px-1 py-2 bg-gray-50 rounded-xl px-3">
-          <span className="text-sm font-bold text-gray-500">Total</span>
-          <span className="text-2xl font-bold text-primary">L.{cartTotal.toFixed(2)}</span>
+        <div className="flex justify-between items-center px-3 py-2 rounded-xl" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.2)' }}>
+          <span className="text-sm font-bold" style={{ color:'rgba(160,144,112,0.7)' }}>Total chakra</span>
+          <span className="text-2xl font-bold" style={{ color:'#FF6B00' }}>L.{cartTotal.toFixed(2)}</span>
         </div>
         {extrasInCart.length > 0 && kitchenInCart.length === 0 ? (
           <button onClick={() => { setQuickChargeItems(extrasInCart); setShowQuickPay(true); }}
-            className="w-full py-3.5 bg-gradient-to-r from-green-600 to-green-500 text-white font-bold rounded-xl hover:opacity-90 flex items-center justify-center gap-2 shadow-md min-h-[52px] text-sm active:scale-95 transition-all">
-            <Zap className="w-5 h-5"/>Cobrar de Una Vez
+            className="w-full flex items-center justify-center gap-2 active:scale-95 transition-all"
+            style={{ padding:'13px', background:'linear-gradient(135deg,#166534,#15803d)', color:'#F5EDD8', fontWeight:900, borderRadius:10, border:'none', fontSize:14, cursor:'pointer', minHeight:52, boxShadow:'0 0 16px rgba(34,197,94,0.25)', WebkitAppearance:'none' }}>
+            <Zap className="w-5 h-5"/>⚡ Cobrar Jutsu
           </button>
         ) : (
           <button onClick={sendToKitchen} disabled={cart.length === 0}
-            className="w-full py-3.5 bg-gradient-to-r from-primary to-[#FFB905] text-primary-foreground font-bold rounded-xl hover:opacity-90 disabled:opacity-40 flex items-center justify-center gap-2 shadow-md min-h-[52px] text-sm active:scale-95 transition-all">
+            className="w-full flex items-center justify-center gap-2 active:scale-95 transition-all"
+            style={{ padding:'13px', background: cart.length===0 ? 'rgba(255,107,0,0.2)' : 'linear-gradient(135deg,#FF6B00,#CC3D00)', color: cart.length===0 ? 'rgba(255,107,0,0.4)' : '#0D0D0F', fontWeight:900, borderRadius:10, border:'none', fontSize:14, cursor: cart.length===0 ? 'not-allowed':'pointer', minHeight:52, boxShadow: cart.length>0 ? '0 0 16px rgba(255,107,0,0.3)' : 'none', WebkitAppearance:'none' }}>
             <Send className="w-5 h-5"/>
-            {kitchenInCart.length > 0 && extrasInCart.length > 0 ? 'Enviar + Extras' : 'Enviar a Cocina'}
+            {kitchenInCart.length > 0 && extrasInCart.length > 0 ? '🔥 Enviar + Extras' : '🔥 Enviar a Cocina'}
           </button>
         )}
       </div>
@@ -763,19 +778,22 @@ export default function POSTerminal() {
 
       {/* Body */}
       <div className="flex-1 flex overflow-hidden">
-        <div className="flex-1 flex flex-col overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="flex-1 flex flex-col overflow-hidden" style={{ backgroundColor:'#0D0D0F' }}>
           {view === 'menu' ? (
             <>
-              <div className="px-3 pt-3 pb-0 shrink-0 bg-white/50 backdrop-blur-sm">
-                <div className="flex gap-1.5 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
+              {/* Category tabs */}
+              <div className="px-3 pt-3 pb-0 shrink-0" style={{ backgroundColor:'rgba(10,10,8,0.95)', borderBottom:'1px solid rgba(255,107,0,0.15)' }}>
+                <div className="flex gap-1.5 overflow-x-auto pb-2" style={{ scrollbarWidth:'none' }}>
                   {CATEGORIES.map(cat => (
                     <button key={cat} onClick={() => setSelectedCat(cat)}
-                      className={`shrink-0 px-3.5 h-10 rounded-xl font-bold text-xs transition-all whitespace-nowrap ${
-                        selectedCat === cat
-                          ? 'bg-gradient-to-r from-gray-900 to-black text-white shadow-lg border-2 border-gray-700'
-                          : 'bg-white border border-gray-200 hover:border-primary/50 text-gray-600 active:bg-gray-50'
-                      }`}>
-                      {cat}{!KITCHEN_CATS.has(cat) && <span className="ml-1 opacity-40 text-xs">⚡</span>}
+                      className="shrink-0 px-3.5 h-10 rounded-xl font-bold text-xs transition-all whitespace-nowrap active:scale-95"
+                      style={{
+                        backgroundColor: selectedCat===cat ? '#FF6B00' : 'rgba(255,107,0,0.08)',
+                        color: selectedCat===cat ? '#0D0D0F' : 'rgba(160,144,112,0.8)',
+                        border: `1px solid ${selectedCat===cat ? '#FF6B00' : 'rgba(255,107,0,0.2)'}`,
+                        boxShadow: selectedCat===cat ? '0 0 12px rgba(255,107,0,0.3)' : 'none',
+                      }}>
+                      {cat}{!KITCHEN_CATS.has(cat) && <span className="ml-1 opacity-50 text-xs">⚡</span>}
                     </button>
                   ))}
                 </div>
@@ -785,26 +803,28 @@ export default function POSTerminal() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2">
                   {filteredItems.map((item, i) => (
                     <button key={i} onClick={() => addToCart(item)}
-                      className="bg-gradient-to-b from-white to-gray-50 border-2 border-gray-300 rounded-xl p-2 hover:border-yellow-400 hover:shadow-xl active:scale-95 transition-all text-left group min-h-[64px] shadow-md">
-                      <p className="font-bold text-[11px] mb-1 leading-tight group-hover:text-amber-600 transition-colors line-clamp-2">{item.name}</p>
-                      <p className="text-sm font-black text-amber-600">L.{item.price}</p>
+                      className="active:scale-95 transition-all text-left min-h-[64px]"
+                      style={{ background:'linear-gradient(135deg,#1A1510,#221C10)', border:'1px solid rgba(255,107,0,0.2)', borderRadius:10, padding:'8px 10px', cursor:'pointer', WebkitAppearance:'none' }}>
+                      <p className="font-bold text-[11px] mb-1 leading-tight line-clamp-2" style={{ color:'#F5EDD8' }}>{item.name}</p>
+                      <p className="text-sm font-black" style={{ color:'#FF6B00' }}>L.{item.price}</p>
                     </button>
                   ))}
                   <button onClick={() => setShowOtro(true)}
-                    className="bg-white/50 backdrop-blur-sm border-2 border-dashed border-gray-400 rounded-xl p-2 hover:border-yellow-400 hover:bg-yellow-50 active:scale-95 transition-all text-left group min-h-[64px] flex flex-col justify-center items-center gap-1 shadow-md">
-                    <Plus className="w-4 h-4 text-gray-400 group-hover:text-amber-600"/>
-                    <p className="text-[10px] font-bold text-gray-400 group-hover:text-amber-600">Otro</p>
+                    className="active:scale-95 transition-all text-left min-h-[64px] flex flex-col justify-center items-center gap-1"
+                    style={{ background:'rgba(255,107,0,0.04)', border:'1px dashed rgba(255,107,0,0.25)', borderRadius:10, padding:'8px', cursor:'pointer', WebkitAppearance:'none' }}>
+                    <Plus className="w-4 h-4" style={{ color:'rgba(255,107,0,0.5)' }}/>
+                    <p className="text-[10px] font-bold" style={{ color:'rgba(255,107,0,0.5)' }}>Otro</p>
                   </button>
                 </div>
               </div>
             </>
           ) : (
-            <div className="flex-1 overflow-auto p-4 space-y-6 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div className="flex-1 overflow-auto p-4 space-y-6" style={{ backgroundColor:'#0D0D0F' }}>
               {/* Active orders */}
               <div>
-                <div className="bg-white/70 backdrop-blur-sm px-4 py-2.5 rounded-xl mb-3 flex items-center gap-2 shadow-sm">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block animate-pulse"/>
-                  <h2 className="text-base font-bold text-gray-700">Activos</h2>
+                <div className="px-4 py-2.5 rounded-xl mb-3 flex items-center gap-2" style={{ backgroundColor:'rgba(255,107,0,0.06)', border:'1px solid rgba(255,107,0,0.15)' }}>
+                  <span className="w-2.5 h-2.5 rounded-full inline-block animate-pulse" style={{ backgroundColor:'#FF6B00' }}/>
+                  <h2 className="text-base font-bold" style={{ color:'#F5EDD8' }}>Activos</h2>
                   {activeOrders.length > 0 && (
                     <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded-full">{activeOrders.length}</span>
                   )}
