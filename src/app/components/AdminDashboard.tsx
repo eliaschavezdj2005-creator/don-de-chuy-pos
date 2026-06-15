@@ -659,11 +659,11 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={otherIncomeDesc} onChange={e => setOtherIncomeDesc(e.target.value)}
                       placeholder="Descripción"
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }}" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }} />
                     <div className="flex gap-2">
                       <input type="number" value={otherIncome} onChange={e => setOtherIncome(e.target.value)}
                         placeholder="Monto (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }}" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }} />
                       <button onClick={handleAddOtherIncome} className="px-5 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         +
                       </button>
@@ -682,7 +682,7 @@ export default function AdminDashboard() {
                   <div className="flex gap-2 mt-7">
                     <input type="number" value={cardTotal} onChange={e => setCardTotal(e.target.value)}
                       placeholder="Monto (L.)"
-                      className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(74,144,217,0.3)', color:'#F5EDD8' }}" />
+                      className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(74,144,217,0.3)', color:'#F5EDD8' }} />
                     <button onClick={handleSaveCardTotal} className="px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                       Guardar
                     </button>
@@ -700,14 +700,14 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={expenseDescription} onChange={e => setExpenseDescription(e.target.value)}
                       placeholder="Descripción del gasto"
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }} />
                     <input type="text" value={expenseInvoice} onChange={e => setExpenseInvoice(e.target.value)}
                       placeholder="No. Factura (opcional)"
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }} />
                     <div className="flex gap-2">
                       <input type="number" value={expenseAmount} onChange={e => setExpenseAmount(e.target.value)}
                         placeholder="Monto (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }} />
                       <button onClick={handleAddExpense} className="px-5 py-3 bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         +
                       </button>
@@ -726,14 +726,14 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={paymentDescription} onChange={e => setPaymentDescription(e.target.value)}
                       placeholder="Descripción del pago"
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }} />
                     <input type="text" value={paymentInvoice} onChange={e => setPaymentInvoice(e.target.value)}
                       placeholder="No. Factura (opcional)"
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }} />
                     <div className="flex gap-2">
                       <input type="number" value={paymentAmount} onChange={e => setPaymentAmount(e.target.value)}
                         placeholder="Monto a descontar (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }} />
                       <button onClick={handleAddPayment} className="px-5 py-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         Descontar
                       </button>
