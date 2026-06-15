@@ -20,7 +20,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/supabase': {
-        target: 'https://ldqohbdvwpsxakjkrjqu.supabase.co',
+        target: 'https://bvaiqkuhorlghbproljd.supabase.co',
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/api\/supabase/, ''),
       },
