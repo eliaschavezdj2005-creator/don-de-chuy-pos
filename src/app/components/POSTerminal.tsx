@@ -697,32 +697,29 @@ export default function POSTerminal() {
 
   // ── Main layout ──────────────────────────────────────────────────────────────
   return (
-    <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
-      {/* Header - Estilo Mario (Responsive) */}
-      <header className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 border-b-4 border-red-800 shadow-2xl flex items-center justify-between px-2 sm:px-4 py-2 sm:py-3 shrink-0 relative overflow-hidden">
-        {/* Shine effect */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"/>
-        <div className="absolute top-2 left-20 w-8 h-8 bg-white/20 rounded-full blur-lg"/>
-        <div className="absolute top-1 right-40 w-6 h-6 bg-white/20 rounded-full blur-md"/>
+    <div className="h-screen flex flex-col overflow-hidden" style={{ backgroundColor:'#0D0D0F' }}>
+      {/* Header - Naruto */}
+      <header className="flex items-center justify-between px-2 sm:px-4 py-2 sm:py-3 shrink-0 relative overflow-hidden" style={{ background:'linear-gradient(90deg,#0A0A08,#1E1200,#0A0A08)', borderBottom:'2px solid rgba(255,107,0,0.5)', boxShadow:'0 4px 20px rgba(0,0,0,0.6)' }}>
+        {/* Chakra glow line */}
+        <div className="absolute top-0 left-0 w-full h-0.5" style={{ background:'linear-gradient(90deg,transparent,#FF6B00,transparent)' }}/>
 
         <div className="flex items-center gap-1.5 sm:gap-3 relative z-10">
-          <button onClick={() => navigate('/')} className="p-2 sm:p-2.5 rounded-lg sm:rounded-xl bg-white/10 hover:bg-white/20 border-2 border-white/20 text-white active:scale-95 min-w-[40px] sm:min-w-[44px] min-h-[40px] sm:min-h-[44px] flex items-center justify-center transition-all shadow-lg">
-            <ArrowLeft className="w-4 sm:w-5 h-4 sm:h-5 drop-shadow-md"/>
+          <button onClick={() => navigate('/')} className="flex items-center justify-center active:scale-95 transition-all" style={{ padding:'8px 10px', borderRadius:8, backgroundColor:'rgba(255,107,0,0.1)', border:'1px solid rgba(255,107,0,0.3)', color:'#FF6B00', minWidth:40, minHeight:40 }}>
+            <ArrowLeft className="w-4 sm:w-5 h-4 sm:h-5"/>
           </button>
-          <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 border-3 border-yellow-600 rounded-lg sm:rounded-xl p-1.5 sm:p-2 hidden sm:flex items-center shadow-xl">
-            <img src={logo} alt="Don de Chuy" className="h-7 sm:h-9 w-auto drop-shadow-lg"/>
+          <div className="hidden sm:flex items-center" style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.5)', borderRadius:10, padding:'4px 8px', boxShadow:'0 0 12px rgba(255,107,0,0.2)' }}>
+            <img src={logo} alt="Don de Chuy" className="h-7 sm:h-9 w-auto"/>
           </div>
           <div>
-            <span className="font-black text-sm sm:text-lg text-white block leading-tight drop-shadow-md" style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.3)' }}>VENTANA</span>
-            <span className="text-[10px] sm:text-xs text-white/90 font-bold tracking-wide hidden sm:inline">★ Terminal POS ★</span>
+            <span className="font-black text-sm sm:text-lg block leading-tight" style={{ color:'#FF6B00', textShadow:'0 0 12px rgba(255,107,0,0.5)' }}>VENTANA</span>
+            <span className="text-[10px] sm:text-xs font-bold tracking-widest hidden sm:inline" style={{ color:'rgba(160,144,112,0.7)' }}>★ TERMINAL POS ★</span>
           </div>
         </div>
 
         <div className="flex items-center gap-1 sm:gap-2 relative z-10">
           <div className="relative hidden sm:block" data-calc>
-            <button onClick={() => setShowCalc(!showCalc)}
-              className={`p-2 sm:p-2.5 rounded-lg sm:rounded-xl min-w-[40px] sm:min-w-[44px] min-h-[40px] sm:min-h-[44px] flex items-center justify-center transition-all border-2 active:scale-95 shadow-lg ${showCalc ? 'bg-yellow-400 text-gray-900 border-yellow-600 shadow-yellow-500/50' : 'bg-white/10 hover:bg-white/20 text-white border-white/20'}`}>
-              <Calculator className="w-4 sm:w-5 h-4 sm:h-5 drop-shadow-md"/>
+            <button onClick={() => setShowCalc(!showCalc)} className="flex items-center justify-center active:scale-95 transition-all" style={{ padding:'8px 10px', borderRadius:8, minWidth:40, minHeight:40, backgroundColor: showCalc ? '#FF6B00' : 'rgba(255,107,0,0.1)', border:'1px solid rgba(255,107,0,0.3)', color: showCalc ? '#0D0D0F' : '#FF6B00' }}>
+              <Calculator className="w-4 sm:w-5 h-4 sm:h-5"/>
             </button>
             {showCalc && (
               <div className="absolute right-0 top-13 z-50 mt-1" data-calc>
@@ -731,16 +728,14 @@ export default function POSTerminal() {
             )}
           </div>
 
-          <div className="flex bg-white/10 rounded-lg sm:rounded-xl p-0.5 sm:p-1 gap-0.5 border-2 border-white/20 shadow-lg backdrop-blur-sm">
-            <button onClick={() => setView('menu')}
-              className={`px-2 sm:px-3 h-8 sm:h-9 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-black transition-all active:scale-95 ${view === 'menu' ? 'bg-yellow-400 text-gray-900 shadow-md border-2 border-yellow-600' : 'text-white hover:text-white hover:bg-white/10'}`}>
+          <div className="flex rounded-lg sm:rounded-xl p-0.5 gap-0.5" style={{ backgroundColor:'rgba(255,107,0,0.08)', border:'1px solid rgba(255,107,0,0.2)' }}>
+            <button onClick={() => setView('menu')} className="px-2 sm:px-3 h-8 sm:h-9 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-black transition-all active:scale-95" style={{ backgroundColor: view==='menu' ? '#FF6B00' : 'transparent', color: view==='menu' ? '#0D0D0F' : '#A09070' }}>
               Menú
             </button>
-            <button onClick={() => setView('orders')}
-              className={`px-2 sm:px-3 h-8 sm:h-9 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-black transition-all relative active:scale-95 ${view === 'orders' ? 'bg-yellow-400 text-gray-900 shadow-md border-2 border-yellow-600' : 'text-white hover:text-white hover:bg-white/10'}`}>
+            <button onClick={() => setView('orders')} className="px-2 sm:px-3 h-8 sm:h-9 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-black transition-all relative active:scale-95" style={{ backgroundColor: view==='orders' ? '#FF6B00' : 'transparent', color: view==='orders' ? '#0D0D0F' : '#A09070' }}>
               Pedidos
               {activeOrders.length > 0 && (
-                <span className="absolute -top-1 sm:-top-1.5 -right-1 sm:-right-1.5 bg-green-500 text-white text-[10px] sm:text-xs font-bold rounded-full w-4 sm:w-5 h-4 sm:h-5 flex items-center justify-center leading-none border-2 border-white shadow-lg animate-bounce">
+                <span className="absolute -top-1 sm:-top-1.5 -right-1 sm:-right-1.5 font-bold rounded-full w-4 sm:w-5 h-4 sm:h-5 flex items-center justify-center leading-none animate-bounce" style={{ backgroundColor:'#CC1A00', color:'#F5EDD8', fontSize:10, border:'1px solid #0D0D0F' }}>
                   {activeOrders.length}
                 </span>
               )}

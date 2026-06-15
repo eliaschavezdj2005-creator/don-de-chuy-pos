@@ -323,26 +323,28 @@ export default function AdminDashboard() {
 
   if (!isAuthenticated) {
     return (
-      <div className="h-screen flex bg-[#111111]">
-        <div className="hidden md:flex md:w-2/5 bg-[#1A1A1A] border-r border-white/10 flex-col items-center justify-center p-12">
-          <div className="bg-white rounded-3xl p-8 shadow-2xl mb-8">
-            <img src={logo} alt="Don de Chuy" className="w-32 h-auto"/>
+      <div className="h-screen flex" style={{ backgroundColor:'#0D0D0F' }}>
+        <div className="hidden md:flex md:w-2/5 flex-col items-center justify-center p-12" style={{ backgroundColor:'#0D0D0F', borderRight:'1px solid rgba(255,107,0,0.2)' }}>
+          <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'3px solid #FF6B00', borderRadius:16, padding:24, marginBottom:24, boxShadow:'0 0 40px rgba(255,107,0,0.3)' }}>
+            <img src={logo} alt="Don de Chuy" style={{ width:120, height:'auto' }}/>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Administración</h1>
-          <p className="text-white/40 text-sm tracking-widest uppercase">Don de Chuy</p>
+          <h1 style={{ fontSize:22, fontWeight:900, color:'#F5EDD8', marginBottom:6 }}>Administración</h1>
+          <div style={{ display:'flex', alignItems:'center', gap:6, background:'linear-gradient(90deg,#2C2C3A,#3D3D52,#2C2C3A)', borderTop:'2px solid #8B8FA8', borderBottom:'2px solid #8B8FA8', padding:'4px 16px' }}>
+            <span style={{ color:'#C8C8DC', fontSize:11, letterSpacing:4, textTransform:'uppercase' }}>Don de Chuy</span>
+          </div>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center p-6 bg-white">
+        <div className="flex-1 flex flex-col items-center justify-center p-6" style={{ backgroundColor:'#0D0D0F' }}>
           <button onClick={() => navigate('/')} className="self-start mb-8 flex items-center gap-2 text-gray-400 hover:text-gray-700 text-sm">
             <ArrowLeft className="w-4 h-4" />Regresar
           </button>
           <div className="w-full max-w-sm">
             <div className="md:hidden text-center mb-8">
-              <div className="bg-gray-50 rounded-2xl p-4 inline-block mb-4">
-                <img src={logo} alt="Don de Chuy" className="w-24 h-auto"/>
+              <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid #FF6B00', borderRadius:12, padding:16, display:'inline-block', marginBottom:16, boxShadow:'0 0 24px rgba(255,107,0,0.3)' }}>
+                <img src={logo} alt="Don de Chuy" style={{ width:80, height:'auto' }}/>
               </div>
             </div>
-            <h2 className="text-2xl font-bold mb-1 text-gray-900">Acceso Admin</h2>
-            <p className="text-gray-400 text-sm mb-8">Introduce tu PIN para continuar</p>
+            <h2 style={{ fontSize:22, fontWeight:900, color:'#F5EDD8', marginBottom:4 }}>Acceso Admin</h2>
+            <p style={{ color:'rgba(160,144,112,0.7)', fontSize:13, marginBottom:24 }}>Introduce tu PIN para continuar</p>
             <div className="space-y-4">
               <input
                 type="password"
@@ -351,10 +353,10 @@ export default function AdminDashboard() {
                 onKeyPress={e => e.key === 'Enter' && handlePinSubmit()}
                 placeholder="● ● ● ● ● ● ● ●"
                 maxLength={8}
-                className="w-full px-4 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary outline-none text-center text-3xl tracking-[0.5em] font-mono"
+                style={{ width:'100%', padding:'14px 16px', borderRadius:10, border:'2px solid rgba(255,107,0,0.4)', backgroundColor:'#1A1510', color:'#F5EDD8', outline:'none', textAlign:'center', fontSize:28, letterSpacing:'0.5em', fontFamily:'monospace', boxSizing:'border-box' }}
               />
-              <button onClick={handlePinSubmit} className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl hover:opacity-90 transition-opacity text-base shadow-md">
-                Acceder
+              <button onClick={handlePinSubmit} style={{ width:'100%', padding:'14px', background:'linear-gradient(135deg,#FF6B00,#CC3D00)', color:'#0D0D0F', fontWeight:900, borderRadius:10, border:'none', fontSize:15, cursor:'pointer', boxShadow:'0 0 20px rgba(255,107,0,0.4)', WebkitAppearance:'none' }}>
+                🔑 ENTRAR
               </button>
             </div>
           </div>
@@ -364,11 +366,11 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="flex h-screen" style={{ backgroundColor:'#0D0D0F' }}>
       {/* Sidebar */}
-      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-gradient-to-b from-[#1A1A1A] to-[#0A0A0A] border-r border-white/10 overflow-hidden shrink-0 shadow-2xl`}>
+      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 overflow-hidden shrink-0`} style={{ backgroundColor:'#0A0A08', borderRight:'1px solid rgba(255,107,0,0.2)', boxShadow:'4px 0 24px rgba(0,0,0,0.6)' }}>
         <div className="p-6">
-          <div className="bg-white rounded-2xl p-4 mb-6 shadow-xl">
+          <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.5)', borderRadius:12, padding:12, marginBottom:20, boxShadow:'0 0 16px rgba(255,107,0,0.2)' }}>
             <img src={logo} alt="Don de Chuy" className="w-full h-auto" />
           </div>
           <nav className="space-y-2">
@@ -422,33 +424,33 @@ export default function AdminDashboard() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto min-w-0">
+      <main className="flex-1 overflow-auto min-w-0" style={{ backgroundColor:'#0D0D0F' }}>
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#1A1A1A] via-[#2A2A2A] to-[#1A1A1A] border-b border-white/10 px-6 py-4 flex items-center gap-4 shadow-xl sticky top-0 z-10">
+        <header className="px-6 py-4 flex items-center gap-4 sticky top-0 z-10" style={{ background:'linear-gradient(90deg,#0A0A08,#15110A,#0A0A08)', borderBottom:'1px solid rgba(255,107,0,0.25)', boxShadow:'0 4px 20px rgba(0,0,0,0.5)' }}>
           <button onClick={() => navigate('/')} className="p-2.5 rounded-xl hover:bg-white/10 transition-colors text-white/70 hover:text-white">
             <ArrowLeft className="w-5 h-5" />
           </button>
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2.5 rounded-xl hover:bg-white/10 transition-colors text-white/70 hover:text-white">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="bg-white rounded-xl p-2 shadow-md">
+          <div style={{ background:'linear-gradient(135deg,#2A1F08,#3D2E0A)', border:'2px solid rgba(255,107,0,0.5)', borderRadius:10, padding:'6px 10px', boxShadow:'0 0 12px rgba(255,107,0,0.2)' }}>
             <img src={logo} alt="Don de Chuy" className="h-10 w-auto" />
           </div>
           <div>
-            <h2 className="text-lg font-bold text-white leading-tight">Panel de Administración</h2>
-            <p className="text-xs text-white/40">Don de Chuy Business</p>
+            <h2 style={{ fontSize:15, fontWeight:900, color:'#F5EDD8', lineHeight:1.2 }}>Panel de Administración</h2>
+            <p style={{ fontSize:11, color:'rgba(255,107,0,0.6)', letterSpacing:1 }}>Don de Chuy Business</p>
           </div>
-          <div className="ml-auto flex items-center gap-2 bg-white/10 px-3 py-2 rounded-xl">
+          <div className="ml-auto flex items-center gap-2" style={{ padding:'6px 12px', borderRadius:8, backgroundColor: connected ? 'rgba(34,197,94,0.12)' : 'rgba(255,107,0,0.12)', border:`1px solid ${connected ? 'rgba(34,197,94,0.3)' : 'rgba(255,107,0,0.3)'}` }}>
             {connected
               ? <>
-                  <Wifi className="w-4 h-4 text-green-400" />
-                  <span className="text-xs text-green-300 font-bold">En línea</span>
-                  {pendingCount > 0 && <span className="text-xs text-yellow-300 font-bold">({pendingCount} pend.)</span>}
+                  <Wifi className="w-4 h-4" style={{ color:'#22c55e' }} />
+                  <span style={{ fontSize:11, color:'#86efac', fontWeight:700 }}>Chakra activo</span>
+                  {pendingCount > 0 && <span style={{ fontSize:11, color:'#FF6B00', fontWeight:700 }}>({pendingCount})</span>}
                 </>
               : <>
-                  <WifiOff className="w-4 h-4 text-yellow-400 animate-pulse" />
-                  <span className="text-xs text-yellow-300 font-medium">Sin conexión</span>
-                  {pendingCount > 0 && <span className="text-xs text-yellow-300 font-bold">· {pendingCount} en cola</span>}
+                  <WifiOff className="w-4 h-4 animate-pulse" style={{ color:'#FF6B00' }} />
+                  <span style={{ fontSize:11, color:'#FF6B00', fontWeight:700 }}>Sin conexión</span>
+                  {pendingCount > 0 && <span style={{ fontSize:11, color:'#FF6B00', fontWeight:700 }}>· {pendingCount}</span>}
                 </>
             }
           </div>
@@ -457,54 +459,31 @@ export default function AdminDashboard() {
         <div className="p-6 space-y-6">
           {activeTab === 'dashboard' ? (
             <>
-              {/* Stats Cards */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-                <div className="bg-gradient-to-br from-primary via-[#FFB905] to-[#F2B705] rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-bold text-primary-foreground/80 uppercase tracking-wide">Ventas</p>
-                    <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <DollarSign className="w-5 h-5 text-white" />
+              {/* Stats Cards — Naruto scroll style */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  { label:'Ventas', value: getTotalSales(), icon: DollarSign, color:'#FF6B00', bg:'rgba(255,107,0,0.1)', border:'rgba(255,107,0,0.35)', sub:'En tiempo real' },
+                  { label:'Otros', value: getOtherIncome(), icon: TrendingUp, color:'#22c55e', bg:'rgba(34,197,94,0.08)', border:'rgba(34,197,94,0.25)', sub:'Tarjetas + Extras' },
+                  { label:'Gastos', value: getTotalExpenses(), icon: Receipt, color:'#CC1A00', bg:'rgba(204,26,0,0.1)', border:'rgba(204,26,0,0.3)', sub:'Proveedores' },
+                  { label:'Ganancia', value: getNetProfit(), icon: TrendingUp, color:'#F5C842', bg:'rgba(245,200,66,0.08)', border:'rgba(245,200,66,0.25)', sub:'Neto del día' },
+                ].map(({ label, value, icon: Icon, color, bg, border, sub }) => (
+                  <div key={label} style={{ backgroundColor:'#1A1510', border:`1px solid ${border}`, borderRadius:12, padding:20, boxShadow:`0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,220,100,0.04)` }}>
+                    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:12 }}>
+                      <p style={{ fontSize:10, fontWeight:800, color, textTransform:'uppercase', letterSpacing:1 }}>{label}</p>
+                      <div style={{ width:36, height:36, borderRadius:8, backgroundColor:bg, border:`1px solid ${border}`, display:'flex', alignItems:'center', justifyContent:'center' }}>
+                        <Icon style={{ width:18, height:18, color }} />
+                      </div>
                     </div>
+                    <p style={{ fontSize:26, fontWeight:900, color:'#F5EDD8' }}>L.{value.toFixed(2)}</p>
+                    <p style={{ fontSize:10, color:'rgba(160,144,112,0.7)', marginTop:4 }}>{sub}</p>
                   </div>
-                  <p className="text-3xl font-bold text-white">L.{getTotalSales().toFixed(2)}</p>
-                  <p className="text-xs text-white/70 mt-2 font-medium">En tiempo real</p>
-                </div>
-                <div className="bg-white border-2 border-green-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-bold text-green-600 uppercase tracking-wide">Otros</p>
-                    <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-green-600" />
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-green-700">L.{getOtherIncome().toFixed(2)}</p>
-                  <p className="text-xs text-green-500 mt-2 font-medium">Tarjetas + Extras</p>
-                </div>
-                <div className="bg-white border-2 border-red-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-bold text-red-600 uppercase tracking-wide">Gastos</p>
-                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
-                      <Receipt className="w-5 h-5 text-red-600" />
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-red-700">L.{getTotalExpenses().toFixed(2)}</p>
-                  <p className="text-xs text-red-500 mt-2 font-medium">Proveedores y otros</p>
-                </div>
-                <div className="bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-xs font-bold text-white/50 uppercase tracking-wide">Neto</p>
-                    <div className="w-10 h-10 rounded-xl bg-primary/30 flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-primary" />
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-primary">L.{getNetProfit().toFixed(2)}</p>
-                  <p className="text-xs text-white/40 mt-2 font-medium">Ganancia diaria</p>
-                </div>
+                ))}
               </div>
 
               {/* Charts Row */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Ventas por hora */}
-                <div className="lg:col-span-2 bg-gradient-to-br from-white to-gray-50 border-2 border-primary/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all">
+                <div className="lg:col-span-2 rounded-2xl p-6 shadow-xl transition-all" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.25)' }}>
                   <h3 className="font-bold mb-5 flex items-center gap-2 text-gray-800">
                     <div className="p-2 bg-gradient-to-br from-primary to-[#FFB905] rounded-xl shadow-md">
                       <BarChart2 className="w-5 h-5 text-white" />
@@ -512,7 +491,7 @@ export default function AdminDashboard() {
                     Ventas por Hora
                   </h3>
                   {salesByHour.length === 0 || getTotalSales() === 0 ? (
-                    <div className="h-48 flex items-center justify-center text-gray-400 text-sm bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl">
+                    <div className="h-48 flex items-center justify-center text-gray-400 text-sm rounded-xl" style={{ backgroundColor:'#221C10' }}>
                       Sin ventas registradas aún
                     </div>
                   ) : (
@@ -525,12 +504,12 @@ export default function AdminDashboard() {
                               <stop offset="100%" stopColor="#FFB905" stopOpacity={0.8}/>
                             </linearGradient>
                           </defs>
-                          <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
-                          <XAxis dataKey="hour" tick={{ fontSize: 11, fill: '#6b7280' }} />
-                          <YAxis tick={{ fontSize: 11, fill: '#6b7280' }} />
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,107,0,0.1)" />
+                          <XAxis dataKey="hour" tick={{ fontSize: 11, fill: '#A09070' }} />
+                          <YAxis tick={{ fontSize: 11, fill: '#A09070' }} />
                           <Tooltip
                             formatter={(v: number) => [`L.${v.toFixed(2)}`, 'Ventas']}
-                            contentStyle={{ borderRadius: '12px', border: '2px solid #F2B705', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+                            contentStyle={{ borderRadius: '8px', border: '1px solid rgba(255,107,0,0.4)', backgroundColor: '#1A1510', color: '#F5EDD8', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                           />
                           <Bar dataKey="ventas" fill="url(#barGradient)" radius={[8, 8, 0, 0]} isAnimationActive={false} />
                         </BarChart>
@@ -540,7 +519,7 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Distribución de ingresos */}
-                <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-primary/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all">
+                <div className="rounded-2xl p-6 shadow-xl transition-all" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.25)' }}>
                   <h3 className="font-bold mb-5 text-gray-800 flex items-center gap-2">
                     <div className="p-2 bg-gradient-to-br from-primary to-[#FFB905] rounded-xl shadow-md">
                       <TrendingUp className="w-5 h-5 text-white" />
@@ -548,7 +527,7 @@ export default function AdminDashboard() {
                     Distribución
                   </h3>
                   {pieData.length === 0 ? (
-                    <div className="h-48 flex items-center justify-center text-gray-400 text-sm bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl">
+                    <div className="h-48 flex items-center justify-center text-gray-400 text-sm rounded-xl" style={{ backgroundColor:'#221C10' }}>
                       Sin datos
                     </div>
                   ) : (
@@ -583,7 +562,7 @@ export default function AdminDashboard() {
                             </Pie>
                             <Tooltip
                               formatter={(v: number) => `L.${v.toFixed(2)}`}
-                              contentStyle={{ borderRadius: '12px', border: '2px solid #F2B705', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+                              contentStyle={{ borderRadius: '8px', border: '1px solid rgba(255,107,0,0.4)', backgroundColor: '#1A1510', color: '#F5EDD8', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}
                             />
                           </PieChart>
                         </ResponsiveContainer>
@@ -680,11 +659,11 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={otherIncomeDesc} onChange={e => setOtherIncomeDesc(e.target.value)}
                       placeholder="Descripción"
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-green-200 focus:border-green-400 focus:ring-2 focus:ring-green-200 outline-none text-sm font-medium" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }}" />
                     <div className="flex gap-2">
                       <input type="number" value={otherIncome} onChange={e => setOtherIncome(e.target.value)}
                         placeholder="Monto (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl bg-white border-2 border-green-200 focus:border-green-400 focus:ring-2 focus:ring-green-200 outline-none text-sm font-bold" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(34,197,94,0.3)', color:'#F5EDD8' }}" />
                       <button onClick={handleAddOtherIncome} className="px-5 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         +
                       </button>
@@ -703,7 +682,7 @@ export default function AdminDashboard() {
                   <div className="flex gap-2 mt-7">
                     <input type="number" value={cardTotal} onChange={e => setCardTotal(e.target.value)}
                       placeholder="Monto (L.)"
-                      className="flex-1 px-4 py-3 rounded-xl bg-white border-2 border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 outline-none text-sm font-bold" />
+                      className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(74,144,217,0.3)', color:'#F5EDD8' }}" />
                     <button onClick={handleSaveCardTotal} className="px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                       Guardar
                     </button>
@@ -721,14 +700,14 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={expenseDescription} onChange={e => setExpenseDescription(e.target.value)}
                       placeholder="Descripción del gasto"
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-red-200 focus:border-red-400 focus:ring-2 focus:ring-red-200 outline-none text-sm font-medium" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
                     <input type="text" value={expenseInvoice} onChange={e => setExpenseInvoice(e.target.value)}
                       placeholder="No. Factura (opcional)"
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-red-200 focus:border-red-400 focus:ring-2 focus:ring-red-200 outline-none text-sm font-medium" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
                     <div className="flex gap-2">
                       <input type="number" value={expenseAmount} onChange={e => setExpenseAmount(e.target.value)}
                         placeholder="Monto (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl bg-white border-2 border-red-200 focus:border-red-400 focus:ring-2 focus:ring-red-200 outline-none text-sm font-bold" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(204,26,0,0.3)', color:'#F5EDD8' }}" />
                       <button onClick={handleAddExpense} className="px-5 py-3 bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         +
                       </button>
@@ -747,14 +726,14 @@ export default function AdminDashboard() {
                   <div className="space-y-3">
                     <input type="text" value={paymentDescription} onChange={e => setPaymentDescription(e.target.value)}
                       placeholder="Descripción del pago"
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-200 outline-none text-sm font-medium" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
                     <input type="text" value={paymentInvoice} onChange={e => setPaymentInvoice(e.target.value)}
                       placeholder="No. Factura (opcional)"
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-200 outline-none text-sm font-medium" />
+                      className="w-full px-4 py-3 rounded-xl outline-none text-sm font-medium" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
                     <div className="flex gap-2">
                       <input type="number" value={paymentAmount} onChange={e => setPaymentAmount(e.target.value)}
                         placeholder="Monto a descontar (L.)"
-                        className="flex-1 px-4 py-3 rounded-xl bg-white border-2 border-orange-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-200 outline-none text-sm font-bold" />
+                        className="flex-1 px-4 py-3 rounded-xl outline-none text-sm font-bold" style={{ backgroundColor:'#2A2318', border:'1px solid rgba(255,107,0,0.3)', color:'#F5EDD8' }}" />
                       <button onClick={handleAddPayment} className="px-5 py-3 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg active:scale-95 text-sm">
                         Descontar
                       </button>
@@ -767,7 +746,7 @@ export default function AdminDashboard() {
             /* ─── GESTIÓN DE PEDIDOS TAB ─── */
             <div className="space-y-6">
               {/* Active Orders */}
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg">
+              <div className="rounded-2xl p-6 shadow-lg" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.2)' }}>
                 <h3 className="font-bold mb-5 flex items-center gap-2 text-gray-800">
                   <div className="p-2 bg-primary/10 rounded-xl">
                     <Package className="w-5 h-5 text-primary" />
@@ -825,7 +804,7 @@ export default function AdminDashboard() {
               </div>
 
               {/* Unified Transactions Table */}
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg">
+              <div className="rounded-2xl p-6 shadow-lg" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.2)' }}>
                 <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
                   <h3 className="font-bold flex items-center gap-2 text-gray-800">
                     <div className="p-2 bg-primary/10 rounded-xl">
@@ -904,7 +883,7 @@ export default function AdminDashboard() {
               {/* Modal de confirmación de cierre */}
               {closingDay && (
                 <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-                  <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6">
+                  <div className="rounded-2xl shadow-2xl w-full max-w-sm p-6" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.3)' }}>
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-bold text-lg">Cerrar día</h3>
                       <button onClick={() => setClosingDay(null)} className="p-1 rounded-lg hover:bg-gray-100">
@@ -944,14 +923,14 @@ export default function AdminDashboard() {
               )}
 
               {daysWithData.length === 0 ? (
-                <div className="bg-white border-2 border-gray-200 rounded-2xl p-12 text-center text-gray-400 shadow-lg">
+                <div className="rounded-2xl p-12 text-center shadow-lg" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.2)', color:'rgba(160,144,112,0.6)' }}>
                   Sin datos registrados
                 </div>
               ) : daysWithData.map(date => {
                 const s = buildDailySummary(date);
                 const label = new Date(date + 'T12:00:00').toLocaleDateString('es-HN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
                 return (
-                  <div key={date} className="bg-white border-2 border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+                  <div key={date} className="rounded-2xl shadow-lg overflow-hidden" style={{ backgroundColor:'#1A1510', border:'1px solid rgba(255,107,0,0.2)' }}>
                     <button onClick={() => toggleDay(date)}
                       className="w-full flex items-center justify-between px-6 py-5 hover:bg-gray-50 transition-all">
                       <div className="flex items-center gap-4">
