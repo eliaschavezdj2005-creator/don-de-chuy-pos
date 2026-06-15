@@ -2,755 +2,462 @@ import { createClient, RealtimeChannel } from '@supabase/supabase-js';
 import { createContext, useCallback, useContext, useEffect, useRef, useState, ReactNode } from 'react';
 import { projectId, publicAnonKey } from '../../../utils/supabase/info';
 
-// ============================================
-// SUPABASE CLIENT — con proxy para WiFi que bloquea DNS de supabase.co
-// ============================================
-const SUPABASE_DIRECT = `https://taxicpjtltijhzpojmxw.supabase.co`;
+// ── Supabase client — URL dinámica desde info.tsx ──────────────────────────
+const SUPABASE_URL = `https://${projectId}.supabase.co`;
 
-// En producción, todas las llamadas REST van a /api/supabase?_url=<encoded>
-// Vercel ejecuta ese edge function y reenvía a Supabase desde sus servidores,
-// esquivando el bloqueo de DNS del WiFi. El WebSocket de Realtime se intenta
-// directo; si falla, el polling de 4s lo reemplaza automáticamente.
-const IS_PROD = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
+// En producción (Vercel/figma.site), las llamadas REST van por el proxy Vercel
+// para esquivar bloqueos DNS del WiFi. WebSocket de Realtime va directo.
+const IS_PROD = typeof window !== 'undefined' && !window.location.hostname.includes('localhost');
 
 function proxyFetch(url: RequestInfo | URL, init?: RequestInit): Promise<Response> {
   const urlStr = url.toString();
-  if (IS_PROD && urlStr.startsWith(SUPABASE_DIRECT)) {
-    const proxyUrl = `/api/supabase?_url=${encodeURIComponent(urlStr)}`;
-    return fetch(proxyUrl, init);
+  if (IS_PROD && urlStr.startsWith(SUPABASE_URL)) {
+    const proxyBase = `${window.location.origin}/api/supabase`;
+    const proxied = proxyBase + '?_url=' + encodeURIComponent(urlStr);
+    return fetch(proxied, init);
   }
   return fetch(url, init);
 }
 
-const supabase = createClient(SUPABASE_DIRECT, publicAnonKey, {
+const supabase = createClient(SUPABASE_URL, publicAnonKey, {
   realtime: { params: { eventsPerSecond: 10 } },
   global: { fetch: proxyFetch },
 });
 
-const LS_KEY = 'don-de-chuy-v5';
-const QUEUE_KEY = 'don-de-chuy-queue-v5';
-const BC_CHANNEL = 'don-de-chuy-bc';
+const LS_KEY  = 'ddc-state-v6';
+const BC_NAME = 'ddc-bc-v6';
 
-// ============================================
-// TYPES
-// ============================================
+// ── Types ──────────────────────────────────────────────────────────────────
 export interface OrderItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  category: string;
+  id: string; name: string; price: number; quantity: number; category: string;
 }
-
 export interface Order {
-  id: string;
-  items: OrderItem[];
-  total: number;
-  timestamp: string;
+  id: string; items: OrderItem[]; total: number; timestamp: string;
   status: 'pending' | 'preparing' | 'ready' | 'delivered';
-  deliveredItems: string[];
-  sentBy: string;
+  deliveredItems: string[]; sentBy: string;
 }
-
 export interface Transaction {
-  id: string;
-  amount: number;
+  id: string; amount: number;
   type: 'sale' | 'expense' | 'other-income' | 'card-close' | 'drink-log';
-  description: string;
-  timestamp: string;
+  description: string; timestamp: string;
 }
-
-type SyncOp =
-  | { type: 'INSERT_ORDER'; data: ReturnType<typeof toDbOrder> }
-  | { type: 'UPDATE_ORDER'; id: string; data: Partial<ReturnType<typeof toDbOrder>> }
-  | { type: 'DELETE_ORDER'; id: string }
-  | { type: 'INSERT_TX'; data: Transaction }
-  | { type: 'UPDATE_TX'; id: string; amount: number }
-  | { type: 'DELETE_TX'; id: string }
-  | { type: 'DELETE_TX_BY_DESC'; description: string };
-
-interface SyncQueueItem {
-  id: string;
-  op: SyncOp;
-  createdAt: string;
-  attempts: number;
-}
-
-interface LocalState {
-  orders: Order[];
-  transactions: Transaction[];
-}
-
-interface BroadcastMsg {
-  type: 'STATE_UPDATE';
-  state: LocalState;
-  from: string;
-}
-
 export interface DailySummary {
-  date: string;           // YYYY-MM-DD
-  totalSales: number;
-  totalExpenses: number;
-  otherIncome: number;
-  netProfit: number;
+  date: string; totalSales: number; totalExpenses: number;
+  otherIncome: number; netProfit: number;
   itemsSold: { name: string; qty: number; total: number }[];
   transactions: Transaction[];
 }
+interface AppState { orders: Order[]; transactions: Transaction[] }
+interface BCMsg { type: 'STATE'; state: AppState; from: string }
 
 interface OrderContextType {
-  orders: Order[];
-  transactions: Transaction[];
-  connected: boolean;
-  pendingCount: number;
-  addOrder: (order: Omit<Order, 'deliveredItems'>) => void;
-  addItemsToOrder: (orderId: string, items: OrderItem[]) => void;
-  updateOrderStatus: (orderId: string, status: Order['status']) => void;
+  orders: Order[]; transactions: Transaction[];
+  connected: boolean; pendingCount: number;
+  addOrder: (o: Omit<Order,'deliveredItems'>) => void;
+  addItemsToOrder: (id: string, items: OrderItem[]) => void;
+  updateOrderStatus: (id: string, status: Order['status']) => void;
   markItemReady: (orderId: string, itemId: string) => void;
-  deleteOrder: (orderId: string) => void;
-  addTransaction: (transaction: Omit<Transaction, 'id' | 'timestamp'>) => void;
-  deleteTransaction: (transactionId: string) => void;
-  getTotalSales: () => number;
-  getTotalExpenses: () => number;
-  getOtherIncome: () => number;
-  getNetProfit: () => number;
+  deleteOrder: (id: string) => void;
+  addTransaction: (tx: Omit<Transaction,'id'|'timestamp'>) => void;
+  deleteTransaction: (id: string) => void;
+  getTotalSales: () => number; getTotalExpenses: () => number;
+  getOtherIncome: () => number; getNetProfit: () => number;
   buildDailySummary: (date: string) => DailySummary;
   closeDayAndClean: (date: string) => Promise<void>;
 }
 
-const OrderContext = createContext<OrderContextType | undefined>(undefined);
+const Ctx = createContext<OrderContextType | undefined>(undefined);
 
-// ============================================
-// DB CONVERTERS
-// ============================================
-function toDbOrder(order: Order) {
-  return {
-    id: order.id,
-    items: order.items,
-    total: order.total,
-    timestamp: order.timestamp,
-    status: order.status,
-    delivered_items: order.deliveredItems,
-    sent_by: order.sentBy,
-  };
+// ── DB helpers ─────────────────────────────────────────────────────────────
+function toDb(o: Order) {
+  return { id:o.id, items:o.items, total:o.total, timestamp:o.timestamp,
+           status:o.status, delivered_items:o.deliveredItems, sent_by:o.sentBy };
+}
+function fromDb(r: any): Order {
+  return { id:r.id, items:r.items, total:parseFloat(r.total),
+           timestamp:r.timestamp, status:r.status,
+           deliveredItems:r.delivered_items||[], sentBy:r.sent_by };
 }
 
-function fromDbOrder(row: any): Order {
-  return {
-    id: row.id,
-    items: row.items,
-    total: parseFloat(row.total),
-    timestamp: row.timestamp,
-    status: row.status,
-    deliveredItems: row.delivered_items || [],
-    sentBy: row.sent_by,
-  };
+// ── LocalStorage ───────────────────────────────────────────────────────────
+function loadLS(): AppState {
+  try { const r = localStorage.getItem(LS_KEY); return r ? JSON.parse(r) : {orders:[],transactions:[]}; }
+  catch { return {orders:[],transactions:[]}; }
+}
+function saveLS(s: AppState) {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(s)); } catch {}
 }
 
-// ============================================
-// QUEUE HELPERS
-// ============================================
-function loadQueue(): SyncQueueItem[] {
-  try {
-    return JSON.parse(localStorage.getItem(QUEUE_KEY) || '[]');
-  } catch { return []; }
+// ── Pending queue (ops that failed to reach Supabase) ─────────────────────
+const Q_KEY = 'ddc-queue-v6';
+type QOp =
+  | { t:'upsert_order'; d: ReturnType<typeof toDb> }
+  | { t:'update_order'; id: string; patch: Record<string,any> }
+  | { t:'delete_order'; id: string }
+  | { t:'upsert_tx'; d: Transaction }
+  | { t:'delete_tx'; id: string }
+  | { t:'delete_tx_desc'; desc: string }
+  | { t:'update_tx_amt'; id: string; amount: number };
+
+function loadQ(): QOp[] {
+  try { return JSON.parse(localStorage.getItem(Q_KEY)||'[]'); } catch { return []; }
 }
+function saveQ(q: QOp[]) { try { localStorage.setItem(Q_KEY, JSON.stringify(q)); } catch {} }
+function enq(op: QOp) { const q=loadQ(); q.push(op); saveQ(q); }
 
-function saveQueue(q: SyncQueueItem[]) {
-  localStorage.setItem(QUEUE_KEY, JSON.stringify(q));
-}
-
-function enqueue(op: SyncOp) {
-  const q = loadQueue();
-  q.push({ id: crypto.randomUUID(), op, createdAt: new Date().toISOString(), attempts: 0 });
-  saveQueue(q);
-}
-
-// ============================================
-// STATE HELPERS
-// ============================================
-function loadState(): LocalState {
-  try {
-    const raw = localStorage.getItem(LS_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch {}
-  return { orders: [], transactions: [] };
-}
-
-function saveState(state: LocalState) {
-  localStorage.setItem(LS_KEY, JSON.stringify(state));
-}
-
-// ============================================
-// FLUSH QUEUE - send pending ops to Supabase
-// ============================================
-async function flushQueue(): Promise<boolean> {
-  const q = loadQueue();
-  if (q.length === 0) return true;
-
-  const remaining: SyncQueueItem[] = [];
-  let allOk = true;
-
-  for (const item of q) {
+async function flushQ(): Promise<number> {
+  const q = loadQ();
+  if (!q.length) return 0;
+  const failed: QOp[] = [];
+  for (const op of q) {
     try {
-      const { op } = item;
       let ok = false;
-
-      if (op.type === 'INSERT_ORDER') {
-        const { error } = await supabase.from('orders').upsert([op.data]);
-        ok = !error;
-      } else if (op.type === 'UPDATE_ORDER') {
-        const { error } = await supabase.from('orders').update(op.data).eq('id', op.id);
-        ok = !error;
-      } else if (op.type === 'DELETE_ORDER') {
-        const { error } = await supabase.from('orders').delete().eq('id', op.id);
-        ok = !error;
-      } else if (op.type === 'INSERT_TX') {
-        const { error } = await supabase.from('transactions').upsert([op.data]);
-        ok = !error;
-      } else if (op.type === 'UPDATE_TX') {
-        const { error } = await supabase.from('transactions').update({ amount: op.amount }).eq('id', op.id);
-        ok = !error;
-      } else if (op.type === 'DELETE_TX') {
-        const { error } = await supabase.from('transactions').delete().eq('id', op.id);
-        ok = !error;
-      } else if (op.type === 'DELETE_TX_BY_DESC') {
-        const { error } = await supabase.from('transactions').delete().eq('description', op.description);
-        ok = !error;
-      }
-
-      if (!ok) {
-        remaining.push({ ...item, attempts: item.attempts + 1 });
-        allOk = false;
-      }
-    } catch {
-      remaining.push({ ...item, attempts: item.attempts + 1 });
-      allOk = false;
-    }
+      if (op.t==='upsert_order')    ok = !(await supabase.from('orders').upsert([op.d])).error;
+      else if (op.t==='update_order') ok = !(await supabase.from('orders').update(op.patch).eq('id',op.id)).error;
+      else if (op.t==='delete_order') ok = !(await supabase.from('orders').delete().eq('id',op.id)).error;
+      else if (op.t==='upsert_tx')    ok = !(await supabase.from('transactions').upsert([op.d])).error;
+      else if (op.t==='delete_tx')    ok = !(await supabase.from('transactions').delete().eq('id',op.id)).error;
+      else if (op.t==='delete_tx_desc') ok = !(await supabase.from('transactions').delete().eq('description',op.desc)).error;
+      else if (op.t==='update_tx_amt')  ok = !(await supabase.from('transactions').update({amount:op.amount}).eq('id',op.id)).error;
+      if (!ok) failed.push(op);
+    } catch { failed.push(op); }
   }
-
-  saveQueue(remaining);
-  if (remaining.length > 0) {
-    console.log(`📦 Cola: ${remaining.length} operaciones pendientes`);
-  } else if (q.length > 0) {
-    console.log(`✅ Cola vaciada: ${q.length} operaciones sincronizadas`);
-  }
-  return allOk;
+  saveQ(failed);
+  return failed.length;
 }
 
-// ============================================
-// PROVIDER
-// ============================================
+// ── Provider ───────────────────────────────────────────────────────────────
 export function OrderProvider({ children }: { children: ReactNode }) {
-  const [orders, setOrders] = useState<Order[]>([]);
+  const [orders, setOrders]           = useState<Order[]>([]);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [connected, setConnected] = useState(false);
+  const [connected, setConnected]     = useState(false);
   const [pendingCount, setPendingCount] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   const ordersRef = useRef<Order[]>([]);
-  const transactionsRef = useRef<Transaction[]>([]);
-  const connectedRef = useRef(false);
-  const pollingRef = useRef<NodeJS.Timeout | null>(null);
-  const flushingRef = useRef(false);
-  const tabId = useRef(crypto.randomUUID());
+  const txRef     = useRef<Transaction[]>([]);
+  const tabId     = useRef(crypto.randomUUID());
+  const bcRef     = useRef<BroadcastChannel|null>(null);
+  const pollRef   = useRef<ReturnType<typeof setInterval>|null>(null);
 
   useEffect(() => { ordersRef.current = orders; }, [orders]);
-  useEffect(() => { transactionsRef.current = transactions; }, [transactions]);
-  useEffect(() => { connectedRef.current = connected; }, [connected]);
+  useEffect(() => { txRef.current     = transactions; }, [transactions]);
 
-  // ============================================
-  // APPLY REMOTE STATE (merges remote into local)
-  // ============================================
-  const applyRemoteState = useCallback((remoteOrders: Order[], remoteTx: Transaction[]) => {
-    setOrders(remoteOrders);
-    setTransactions(remoteTx);
-    saveState({ orders: remoteOrders, transactions: remoteTx });
-    setPendingCount(loadQueue().length);
+  // ── Apply remote state ──────────────────────────────────────────────────
+  const apply = useCallback((s: AppState, broadcast = false) => {
+    setOrders(s.orders);
+    setTransactions(s.transactions);
+    saveLS(s);
+    setPendingCount(loadQ().length);
+    if (broadcast) bcRef.current?.postMessage({ type:'STATE', state:s, from:tabId.current } as BCMsg);
   }, []);
 
-  // ============================================
-  // BROADCAST CHANNEL (cross-tab sync)
-  // ============================================
-  const bcRef = useRef<BroadcastChannel | null>(null);
-
+  // ── BroadcastChannel (same device, multi-tab) ──────────────────────────
   useEffect(() => {
     if (typeof BroadcastChannel === 'undefined') return;
-    const bc = new BroadcastChannel(BC_CHANNEL);
+    const bc = new BroadcastChannel(BC_NAME);
     bcRef.current = bc;
-
-    bc.onmessage = (e: MessageEvent<BroadcastMsg>) => {
-      if (e.data.type === 'STATE_UPDATE' && e.data.from !== tabId.current) {
-        setOrders(e.data.state.orders);
-        setTransactions(e.data.state.transactions);
-      }
+    bc.onmessage = (e: MessageEvent<BCMsg>) => {
+      if (e.data.type==='STATE' && e.data.from !== tabId.current) apply(e.data.state, false);
     };
-
     return () => bc.close();
-  }, []);
+  }, [apply]);
 
-  const broadcastState = useCallback((state: LocalState) => {
-    bcRef.current?.postMessage({ type: 'STATE_UPDATE', state, from: tabId.current } as BroadcastMsg);
-  }, []);
-
-  // ============================================
-  // FETCH FROM SUPABASE
-  // ============================================
-  const fetchFromSupabase = useCallback(async (): Promise<boolean> => {
+  // ── Fetch from Supabase ────────────────────────────────────────────────
+  const fetchAll = useCallback(async (): Promise<boolean> => {
     try {
-      const [{ data: od, error: oe }, { data: td, error: te }] = await Promise.all([
-        supabase.from('orders').select('*').order('timestamp', { ascending: false }),
-        supabase.from('transactions').select('*').order('timestamp', { ascending: false }),
+      const [{ data:od, error:oe }, { data:td, error:te }] = await Promise.all([
+        supabase.from('orders').select('*').order('timestamp',{ascending:false}),
+        supabase.from('transactions').select('*').order('timestamp',{ascending:false}),
       ]);
-
-      if (oe || te) return false;
-
-      const newOrders = (od || []).map(fromDbOrder);
-      const newTx = (td || []).map((t: any) => ({ ...t, amount: parseFloat(t.amount) }));
-
-      applyRemoteState(newOrders, newTx);
-      broadcastState({ orders: newOrders, transactions: newTx });
+      if (oe || te) { console.warn('[sync] fetch error', oe||te); return false; }
+      const newOrders = (od||[]).map(fromDb);
+      const newTx = (td||[]).map((r:any) => ({...r, amount:parseFloat(r.amount)}));
+      apply({orders:newOrders, transactions:newTx}, true);
       return true;
-    } catch {
-      return false;
-    }
-  }, [applyRemoteState, broadcastState]);
+    } catch(e) { console.warn('[sync] fetch failed', e); return false; }
+  }, [apply]);
 
-  // ============================================
-  // TRY SYNC (flush queue + optional fetch)
-  // ============================================
-  const trySync = useCallback(async (withFetch = false) => {
-    if (flushingRef.current) return;
-    flushingRef.current = true;
-
+  // ── Write to Supabase (direct + fallback to queue) ─────────────────────
+  const writeOrder = useCallback(async (op: QOp) => {
     try {
-      const queueOk = await flushQueue();
-      setPendingCount(loadQueue().length);
+      let err: any = null;
+      if (op.t==='upsert_order')    err=(await supabase.from('orders').upsert([op.d])).error;
+      else if (op.t==='update_order') err=(await supabase.from('orders').update(op.patch).eq('id',op.id)).error;
+      else if (op.t==='delete_order') err=(await supabase.from('orders').delete().eq('id',op.id)).error;
+      if (err) { console.warn('[sync] order write error, queuing', err.message); enq(op); }
+    } catch(e) { console.warn('[sync] order write failed, queuing', e); enq(op); }
+    setPendingCount(loadQ().length);
+  }, []);
 
-      if (withFetch || !connectedRef.current) {
-        const ok = await fetchFromSupabase();
-        if (ok && !connectedRef.current) {
-          console.log('✅ Reconectado a Supabase');
-          setConnected(true);
-        } else if (!ok && connectedRef.current) {
-          console.log('⚠️ Supabase no disponible, modo offline');
-          setConnected(false);
-        }
-      } else if (!queueOk) {
-        setConnected(false);
-      }
-    } finally {
-      flushingRef.current = false;
-    }
-  }, [fetchFromSupabase]);
+  const writeTx = useCallback(async (op: QOp) => {
+    try {
+      let err: any = null;
+      if (op.t==='upsert_tx')      err=(await supabase.from('transactions').upsert([op.d])).error;
+      else if (op.t==='delete_tx') err=(await supabase.from('transactions').delete().eq('id',(op as any).id)).error;
+      else if (op.t==='delete_tx_desc') err=(await supabase.from('transactions').delete().eq('description',(op as any).desc)).error;
+      else if (op.t==='update_tx_amt')  err=(await supabase.from('transactions').update({amount:(op as any).amount}).eq('id',(op as any).id)).error;
+      if (err) { console.warn('[sync] tx write error, queuing', err.message); enq(op); }
+    } catch(e) { console.warn('[sync] tx write failed, queuing', e); enq(op); }
+    setPendingCount(loadQ().length);
+  }, []);
 
-  // ============================================
-  // INITIAL LOAD
-  // ============================================
+  // ── Initial load ───────────────────────────────────────────────────────
   useEffect(() => {
-    const init = async () => {
-      // Load local state immediately
-      const local = loadState();
-      setOrders(local.orders);
-      setTransactions(local.transactions);
-      setPendingCount(loadQueue().length);
-      ordersRef.current = local.orders;
-      transactionsRef.current = local.transactions;
+    const boot = async () => {
+      // Load localStorage immediately
+      const ls = loadLS();
+      apply(ls, false);
+      ordersRef.current = ls.orders;
+      txRef.current = ls.transactions;
 
-      console.log('🔄 Conectando a Supabase...');
+      // Flush any pending ops
+      await flushQ();
+      setPendingCount(loadQ().length);
 
-      // Try to connect with retries
+      // Fetch from Supabase
+      console.log('[sync] connecting to', SUPABASE_URL);
       for (let i = 0; i < 4; i++) {
-        const ok = await fetchFromSupabase();
-        if (ok) {
-          setConnected(true);
-          await flushQueue();
-          setPendingCount(loadQueue().length);
-          console.log('✅ Conectado a Supabase');
-          break;
-        }
-        if (i < 3) await new Promise(r => setTimeout(r, 1500 * (i + 1)));
+        const ok = await fetchAll();
+        if (ok) { setConnected(true); console.log('[sync] ✅ connected'); break; }
+        if (i < 3) await new Promise(r => setTimeout(r, 1500));
       }
-
-      setLoading(false);
     };
+    boot();
+  }, [fetchAll, apply]);
 
-    init();
-  }, [fetchFromSupabase]);
-
-  // ============================================
-  // POLLING: cada 5s siempre — garantiza sync en todos los WiFis
-  // aunque el WebSocket de Realtime no funcione
-  // ============================================
+  // ── Polling: 3s always ────────────────────────────────────────────────
   useEffect(() => {
-    if (loading) return;
+    pollRef.current = setInterval(async () => {
+      const remaining = await flushQ();
+      setPendingCount(remaining);
+      const ok = await fetchAll();
+      setConnected(ok);
+    }, 3000);
+    return () => { if (pollRef.current) clearInterval(pollRef.current); };
+  }, [fetchAll]);
 
-    pollingRef.current = setInterval(() => {
-      trySync(true);
-    }, 5000);
-
-    return () => { if (pollingRef.current) clearInterval(pollingRef.current); };
-  }, [loading, trySync]);
-
-  // ============================================
-  // REALTIME SUBSCRIPTIONS
-  // ============================================
+  // ── Realtime subscriptions (bonus instant sync) ───────────────────────
   useEffect(() => {
-    if (loading) return;
-
-    let ordersChannel: RealtimeChannel;
-    let txChannel: RealtimeChannel;
-
+    let ordCh: RealtimeChannel, txCh: RealtimeChannel;
     const setup = async () => {
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 800));
 
-      ordersChannel = supabase
-        .channel('orders-rt')
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, (payload) => {
+      ordCh = supabase.channel('orders-rt-v6')
+        .on('postgres_changes', { event:'*', schema:'public', table:'orders' }, payload => {
           setConnected(true);
           if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
-            const order = fromDbOrder(payload.new);
+            const o = fromDb(payload.new);
             setOrders(prev => {
-              const updated = [...prev.filter(o => o.id !== order.id), order]
-                .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-              const state = { orders: updated, transactions: transactionsRef.current };
-              saveState(state);
-              broadcastState(state);
-              return updated;
+              const upd = [...prev.filter(x => x.id!==o.id), o]
+                .sort((a,b) => new Date(b.timestamp).getTime()-new Date(a.timestamp).getTime());
+              const s = {orders:upd, transactions:txRef.current};
+              saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+              return upd;
             });
           } else if (payload.eventType === 'DELETE') {
             setOrders(prev => {
-              const updated = prev.filter(o => o.id !== payload.old.id);
-              const state = { orders: updated, transactions: transactionsRef.current };
-              saveState(state);
-              broadcastState(state);
-              return updated;
+              const upd = prev.filter(x => x.id !== payload.old.id);
+              const s = {orders:upd, transactions:txRef.current};
+              saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+              return upd;
             });
           }
         })
-        .subscribe((status) => {
-          if (status === 'SUBSCRIBED') {
-            setConnected(true);
-            console.log('📡 Realtime conectado');
-          }
-        });
+        .subscribe(st => { if (st==='SUBSCRIBED') { setConnected(true); console.log('[sync] 📡 realtime orders'); } });
 
-      txChannel = supabase
-        .channel('transactions-rt')
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'transactions' }, (payload) => {
+      txCh = supabase.channel('transactions-rt-v6')
+        .on('postgres_changes', { event:'*', schema:'public', table:'transactions' }, payload => {
           setConnected(true);
           if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
-            const tx = { ...payload.new as Transaction, amount: parseFloat((payload.new as any).amount) };
+            const tx = {...payload.new as Transaction, amount:parseFloat((payload.new as any).amount)};
             setTransactions(prev => {
-              const updated = [...prev.filter(t => t.id !== tx.id), tx]
-                .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-              const state = { orders: ordersRef.current, transactions: updated };
-              saveState(state);
-              broadcastState(state);
-              return updated;
+              const upd = [...prev.filter(x=>x.id!==tx.id), tx]
+                .sort((a,b)=>new Date(b.timestamp).getTime()-new Date(a.timestamp).getTime());
+              const s = {orders:ordersRef.current, transactions:upd};
+              saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+              return upd;
             });
           } else if (payload.eventType === 'DELETE') {
             setTransactions(prev => {
-              const updated = prev.filter(t => t.id !== payload.old.id);
-              const state = { orders: ordersRef.current, transactions: updated };
-              saveState(state);
-              broadcastState(state);
-              return updated;
+              const upd = prev.filter(x=>x.id!==payload.old.id);
+              const s = {orders:ordersRef.current, transactions:upd};
+              saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+              return upd;
             });
           }
         })
         .subscribe();
     };
-
     setup();
-
     return () => {
-      ordersChannel && supabase.removeChannel(ordersChannel).catch(() => {});
-      txChannel && supabase.removeChannel(txChannel).catch(() => {});
+      ordCh && supabase.removeChannel(ordCh).catch(()=>{});
+      txCh  && supabase.removeChannel(txCh).catch(()=>{});
     };
-  }, [loading, broadcastState]);
+  }, []);
 
-  // ============================================
-  // RECONNECT ON BROWSER ONLINE EVENT
-  // ============================================
+  // ── Reconnect on browser online ────────────────────────────────────────
   useEffect(() => {
-    const handleOnline = () => {
-      console.log('🌐 Conexión de red detectada, reconectando...');
-      trySync(true);
-    };
-    window.addEventListener('online', handleOnline);
-    return () => window.removeEventListener('online', handleOnline);
-  }, [trySync]);
+    const h = () => { console.log('[sync] 🌐 online event'); fetchAll().then(ok => setConnected(ok)); };
+    window.addEventListener('online', h);
+    return () => window.removeEventListener('online', h);
+  }, [fetchAll]);
 
-  // ============================================
-  // MUTATIONS
-  // ============================================
-  const addOrder = useCallback(async (order: Omit<Order, 'deliveredItems'>) => {
-    const fullOrder: Order = { ...order, deliveredItems: [] };
+  // ── Mutations ──────────────────────────────────────────────────────────
+  const addOrder = useCallback((order: Omit<Order,'deliveredItems'>) => {
+    const full: Order = {...order, deliveredItems:[]};
     const newTx: Transaction = {
-      id: crypto.randomUUID(),
-      amount: order.total,
-      type: 'sale',
-      description: `Pedido ${order.id}`,
-      timestamp: new Date().toISOString(),
+      id: crypto.randomUUID(), amount: order.total, type:'sale',
+      description:`Pedido ${order.id}`, timestamp: new Date().toISOString(),
     };
-
-    // Optimistic update
+    // Optimistic
     setOrders(prev => {
-      const updated = [...prev, fullOrder];
-      const state = { orders: updated, transactions: transactionsRef.current };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = [...prev, full];
+      const s = {orders:upd, transactions:txRef.current};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
     setTransactions(prev => {
-      const updated = [...prev, newTx];
-      const state = { orders: ordersRef.current, transactions: updated };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = [...prev, newTx];
+      const s = {orders:ordersRef.current, transactions:upd};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
+    // Write to Supabase
+    writeOrder({t:'upsert_order', d:toDb(full)});
+    writeTx({t:'upsert_tx', d:newTx});
+  }, [writeOrder, writeTx]);
 
-    // Enqueue for sync
-    enqueue({ type: 'INSERT_ORDER', data: toDbOrder(fullOrder) });
-    enqueue({ type: 'INSERT_TX', data: newTx });
-    setPendingCount(loadQueue().length);
-
-    // Try immediate sync
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const updateOrderStatus = useCallback(async (orderId: string, status: Order['status']) => {
+  const updateOrderStatus = useCallback((id: string, status: Order['status']) => {
     setOrders(prev => {
-      const updated = prev.map(o => o.id === orderId ? { ...o, status } : o);
-      const state = { orders: updated, transactions: transactionsRef.current };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = prev.map(o => o.id===id ? {...o,status} : o);
+      const s = {orders:upd, transactions:txRef.current};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
+    writeOrder({t:'update_order', id, patch:{status}});
+  }, [writeOrder]);
 
-    enqueue({ type: 'UPDATE_ORDER', id: orderId, data: { status } });
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const markItemReady = useCallback(async (orderId: string, itemId: string) => {
-    const order = ordersRef.current.find(o => o.id === orderId);
+  const markItemReady = useCallback((orderId: string, itemId: string) => {
+    const order = ordersRef.current.find(o => o.id===orderId);
     if (!order) return;
-
     const deliveredItems = order.deliveredItems.includes(itemId)
-      ? order.deliveredItems.filter(id => id !== itemId)
+      ? order.deliveredItems.filter(x=>x!==itemId)
       : [...order.deliveredItems, itemId];
-
-    const allReady = order.items.every(item => deliveredItems.includes(item.id));
-    const status: Order['status'] = allReady ? 'ready' : (order.status === 'ready' ? 'preparing' : order.status);
-
+    const allDone = order.items.every(i => deliveredItems.includes(i.id));
+    const status: Order['status'] = allDone ? 'ready' : (order.status==='ready' ? 'preparing' : order.status);
     setOrders(prev => {
-      const updated = prev.map(o => o.id === orderId ? { ...o, deliveredItems, status } : o);
-      const state = { orders: updated, transactions: transactionsRef.current };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = prev.map(o => o.id===orderId ? {...o,deliveredItems,status} : o);
+      const s = {orders:upd, transactions:txRef.current};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
+    writeOrder({t:'update_order', id:orderId, patch:{delivered_items:deliveredItems, status}});
+  }, [writeOrder]);
 
-    enqueue({ type: 'UPDATE_ORDER', id: orderId, data: { delivered_items: deliveredItems, status } });
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const deleteOrder = useCallback(async (orderId: string) => {
+  const deleteOrder = useCallback((id: string) => {
     setOrders(prev => {
-      const updated = prev.filter(o => o.id !== orderId);
-      const state = { orders: updated, transactions: transactionsRef.current };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = prev.filter(o => o.id!==id);
+      const s = {orders:upd, transactions:txRef.current};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
     setTransactions(prev => {
-      const updated = prev.filter(t => t.description !== `Pedido ${orderId}`);
-      const state = { orders: ordersRef.current.filter(o => o.id !== orderId), transactions: updated };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = prev.filter(t => t.description!==`Pedido ${id}`);
+      saveLS({orders:ordersRef.current.filter(o=>o.id!==id), transactions:upd});
+      return upd;
     });
+    writeOrder({t:'delete_order', id});
+    writeTx({t:'delete_tx_desc', desc:`Pedido ${id}`});
+  }, [writeOrder, writeTx]);
 
-    enqueue({ type: 'DELETE_ORDER', id: orderId });
-    enqueue({ type: 'DELETE_TX_BY_DESC', description: `Pedido ${orderId}` });
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const addTransaction = useCallback(async (tx: Omit<Transaction, 'id' | 'timestamp'>) => {
-    const newTx: Transaction = { ...tx, id: crypto.randomUUID(), timestamp: new Date().toISOString() };
-
+  const addTransaction = useCallback((tx: Omit<Transaction,'id'|'timestamp'>) => {
+    const newTx: Transaction = {...tx, id:crypto.randomUUID(), timestamp:new Date().toISOString()};
     setTransactions(prev => {
-      const updated = [...prev, newTx];
-      const state = { orders: ordersRef.current, transactions: updated };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = [...prev, newTx];
+      const s = {orders:ordersRef.current, transactions:upd};
+      saveLS(s); bcRef.current?.postMessage({type:'STATE',state:s,from:tabId.current});
+      return upd;
     });
+    writeTx({t:'upsert_tx', d:newTx});
+  }, [writeTx]);
 
-    enqueue({ type: 'INSERT_TX', data: newTx });
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const deleteTransaction = useCallback(async (txId: string) => {
+  const deleteTransaction = useCallback((id: string) => {
     setTransactions(prev => {
-      const updated = prev.filter(t => t.id !== txId);
-      const state = { orders: ordersRef.current, transactions: updated };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const upd = prev.filter(t=>t.id!==id);
+      saveLS({orders:ordersRef.current, transactions:upd});
+      return upd;
     });
+    writeTx({t:'delete_tx', id});
+  }, [writeTx]);
 
-    enqueue({ type: 'DELETE_TX', id: txId });
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  const addItemsToOrder = useCallback(async (orderId: string, newItems: OrderItem[]) => {
-    const order = ordersRef.current.find(o => o.id === orderId);
+  const addItemsToOrder = useCallback((orderId: string, newItems: OrderItem[]) => {
+    const order = ordersRef.current.find(o=>o.id===orderId);
     if (!order) return;
-
     const merged = [...order.items];
     newItems.forEach(ni => {
-      const existing = merged.find(i => i.name === ni.name);
-      if (existing) existing.quantity += ni.quantity;
-      else merged.push({ ...ni, id: crypto.randomUUID() });
+      const ex = merged.find(i=>i.name===ni.name);
+      if (ex) ex.quantity += ni.quantity; else merged.push({...ni, id:crypto.randomUUID()});
     });
-    const newTotal = merged.reduce((s, i) => s + i.price * i.quantity, 0);
-    const updatedOrder = { ...order, items: merged, total: newTotal };
-    const extraTotal = newItems.reduce((s, i) => s + i.price * i.quantity, 0);
-
+    const newTotal = merged.reduce((s,i)=>s+i.price*i.quantity,0);
+    const upd = {...order, items:merged, total:newTotal};
     setOrders(prev => {
-      const updated = prev.map(o => o.id === orderId ? updatedOrder : o);
-      const state = { orders: updated, transactions: transactionsRef.current };
-      saveState(state);
-      broadcastState(state);
-      return updated;
+      const updList = prev.map(o=>o.id===orderId?upd:o);
+      saveLS({orders:updList, transactions:txRef.current});
+      return updList;
     });
+    writeOrder({t:'upsert_order', d:toDb(upd)});
+    const extraAmt = newItems.reduce((s,i)=>s+i.price*i.quantity,0);
+    const existTx = txRef.current.find(t=>t.description===`Pedido ${orderId}`);
+    if (existTx) writeTx({t:'update_tx_amt', id:existTx.id, amount:order.total+extraAmt});
+  }, [writeOrder, writeTx]);
 
-    enqueue({ type: 'UPDATE_ORDER', id: orderId, data: toDbOrder(updatedOrder) });
+  // ── Calculators ───────────────────────────────────────────────────────
+  const getTotalSales    = useCallback(() => transactions.filter(t=>t.type==='sale').reduce((s,t)=>s+t.amount,0), [transactions]);
+  const getTotalExpenses = useCallback(() => transactions.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0), [transactions]);
+  const getOtherIncome   = useCallback(() => transactions.filter(t=>t.type==='other-income'||t.type==='card-close').reduce((s,t)=>s+t.amount,0), [transactions]);
+  const getNetProfit     = useCallback(() => getTotalSales()+getOtherIncome()-getTotalExpenses(), [getTotalSales,getOtherIncome,getTotalExpenses]);
 
-    // Update transaction amount
-    const existingTx = transactionsRef.current.find(t => t.description === `Pedido ${orderId}`);
-    if (existingTx) {
-      enqueue({ type: 'UPDATE_TX', id: existingTx.id, amount: order.total + extraTotal });
-    }
-
-    setPendingCount(loadQueue().length);
-    trySync(false);
-  }, [broadcastState, trySync]);
-
-  // ============================================
-  // CALCULATORS
-  // ============================================
-  const getTotalSales = useCallback(() =>
-    transactions.filter(t => t.type === 'sale').reduce((s, t) => s + t.amount, 0),
-    [transactions]);
-
-  const getTotalExpenses = useCallback(() =>
-    transactions.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0),
-    [transactions]);
-
-  const getOtherIncome = useCallback(() =>
-    transactions.filter(t => t.type === 'other-income' || t.type === 'card-close').reduce((s, t) => s + t.amount, 0),
-    [transactions]);
-
-  const getNetProfit = useCallback(() =>
-    getTotalSales() + getOtherIncome() - getTotalExpenses(),
-    [getTotalSales, getOtherIncome, getTotalExpenses]);
-
-  // ============================================
-  // CIERRE DIARIO
-  // ============================================
   const buildDailySummary = useCallback((date: string): DailySummary => {
-    const dayTx = transactionsRef.current.filter(t => t.timestamp.startsWith(date));
-    const dayOrders = ordersRef.current.filter(o => o.timestamp.startsWith(date));
-
-    const totalSales = dayTx.filter(t => t.type === 'sale').reduce((s, t) => s + t.amount, 0);
-    const totalExpenses = dayTx.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0);
-    const otherIncome = dayTx.filter(t => t.type === 'other-income' || t.type === 'card-close').reduce((s, t) => s + t.amount, 0);
-
-    // Agregar items vendidos
-    const itemMap: Record<string, { qty: number; total: number }> = {};
-    dayOrders.forEach(o => {
-      o.items.forEach(i => {
-        if (!itemMap[i.name]) itemMap[i.name] = { qty: 0, total: 0 };
-        itemMap[i.name].qty += i.quantity;
-        itemMap[i.name].total += i.price * i.quantity;
-      });
-    });
-    const itemsSold = Object.entries(itemMap)
-      .map(([name, v]) => ({ name, ...v }))
-      .sort((a, b) => b.total - a.total);
-
-    return {
-      date,
-      totalSales,
-      totalExpenses,
-      otherIncome,
-      netProfit: totalSales + otherIncome - totalExpenses,
-      itemsSold,
-      transactions: dayTx,
-    };
+    const dayTx  = txRef.current.filter(t=>t.timestamp.startsWith(date));
+    const dayOrd = ordersRef.current.filter(o=>o.timestamp.startsWith(date));
+    const totalSales    = dayTx.filter(t=>t.type==='sale').reduce((s,t)=>s+t.amount,0);
+    const totalExpenses = dayTx.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+    const otherIncome   = dayTx.filter(t=>t.type==='other-income'||t.type==='card-close').reduce((s,t)=>s+t.amount,0);
+    const itemMap: Record<string,{qty:number;total:number}> = {};
+    dayOrd.forEach(o=>o.items.forEach(i=>{
+      if (!itemMap[i.name]) itemMap[i.name]={qty:0,total:0};
+      itemMap[i.name].qty+=i.quantity; itemMap[i.name].total+=i.price*i.quantity;
+    }));
+    return { date, totalSales, totalExpenses, otherIncome,
+             netProfit:totalSales+otherIncome-totalExpenses,
+             itemsSold:Object.entries(itemMap).map(([name,v])=>({name,...v})).sort((a,b)=>b.total-a.total),
+             transactions:dayTx };
   }, []);
 
   const closeDayAndClean = useCallback(async (date: string) => {
-    // Borrar de Supabase todos los pedidos y transacciones del día
-    const dayTxIds = transactionsRef.current
-      .filter(t => t.timestamp.startsWith(date))
-      .map(t => t.id);
-    const dayOrderIds = ordersRef.current
-      .filter(o => o.timestamp.startsWith(date))
-      .map(o => o.id);
-
-    // Borrar en Supabase
-    if (dayOrderIds.length > 0) {
-      try { await supabase.from('orders').delete().in('id', dayOrderIds); } catch {}
-    }
-    if (dayTxIds.length > 0) {
-      try { await supabase.from('transactions').delete().in('id', dayTxIds); } catch {}
-    }
-
-    // Limpiar estado local
-    setOrders(prev => {
-      const updated = prev.filter(o => !o.timestamp.startsWith(date));
-      const txUpdated = transactionsRef.current.filter(t => !t.timestamp.startsWith(date));
-      saveState({ orders: updated, transactions: txUpdated });
-      return updated;
-    });
-    setTransactions(prev => prev.filter(t => !t.timestamp.startsWith(date)));
+    const dayTxIds  = txRef.current.filter(t=>t.timestamp.startsWith(date)).map(t=>t.id);
+    const dayOrdIds = ordersRef.current.filter(o=>o.timestamp.startsWith(date)).map(o=>o.id);
+    if (dayOrdIds.length) { try { await supabase.from('orders').delete().in('id',dayOrdIds); } catch {} }
+    if (dayTxIds.length)  { try { await supabase.from('transactions').delete().in('id',dayTxIds); } catch {} }
+    setOrders(prev=>{const u=prev.filter(o=>!o.timestamp.startsWith(date));saveLS({orders:u,transactions:txRef.current});return u;});
+    setTransactions(prev=>prev.filter(t=>!t.timestamp.startsWith(date)));
   }, []);
 
   return (
-    <OrderContext.Provider value={{
-      orders,
-      transactions,
-      connected,
-      pendingCount,
-      addOrder,
-      addItemsToOrder,
-      updateOrderStatus,
-      markItemReady,
-      deleteOrder,
-      addTransaction,
-      deleteTransaction,
-      getTotalSales,
-      getTotalExpenses,
-      getOtherIncome,
-      getNetProfit,
-      buildDailySummary,
-      closeDayAndClean,
+    <Ctx.Provider value={{
+      orders, transactions, connected, pendingCount,
+      addOrder, addItemsToOrder, updateOrderStatus, markItemReady,
+      deleteOrder, addTransaction, deleteTransaction,
+      getTotalSales, getTotalExpenses, getOtherIncome, getNetProfit,
+      buildDailySummary, closeDayAndClean,
     }}>
       {children}
-    </OrderContext.Provider>
+    </Ctx.Provider>
   );
 }
 
 export function useOrders() {
-  const ctx = useContext(OrderContext);
+  const ctx = useContext(Ctx);
   if (!ctx) throw new Error('useOrders must be used within OrderProvider');
   return ctx;
 }

@@ -1,6 +1,6 @@
 export const config = { runtime: 'edge' };
 
-const SUPABASE_ORIGIN = 'https://taxicpjtltijhzpojmxw.supabase.co';
+const SUPABASE_DOMAIN = '.supabase.co'; // acepta cualquier proyecto
 const FORWARD_HEADERS = ['content-type', 'apikey', 'authorization', 'prefer', 'range', 'x-client-info'];
 
 export default async function handler(req: Request): Promise<Response> {
@@ -19,7 +19,7 @@ export default async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
   const targetUrl = url.searchParams.get('_url');
 
-  if (!targetUrl || !targetUrl.startsWith(SUPABASE_ORIGIN)) {
+  if (!targetUrl || !targetUrl.includes(SUPABASE_DOMAIN)) {
     return new Response('Bad request', { status: 400 });
   }
 
